@@ -1,0 +1,36 @@
+---
+import { getCollection } from "astro:content";
+import DefaultLayout from "@layouts/DefaultLayout.astro";
+import ProjectSlides from "@components/projects/ProjectSlides.astro";
+import Slider from "@components/Slider.astro";
+
+const projects = await getCollection("projects").then((projects) =>
+    projects.sort((a, b) => a.data.position - b.data.position)
+);
+---
+
+<DefaultLayout
+    title="Projects - Studio Nicole Hölting"
+    activePage="/projects/"
+    federAuthor="Charles Dickens"
+    federZitat="Kleinigkeiten machen die Summe des Lebens aus."
+    federAnimation="translateY(300px) rotate(20deg) translateX(50px)"
+>
+    <p id="mainText">
+        Klein, aber fein - der Showroom des Studios.<br />Tritt ein und lass
+        dich von meinen Projekten inspirieren...
+    </p>
+    <Slider>
+        {projects.map((project) => <ProjectSlides project={project} />)}
+    </Slider>
+</DefaultLayout>
+
+<style>
+    #mainText {
+        margin: 10px;
+        text-align: center;
+        padding: 80px 0;
+        font-size: 25px;
+        font-weight: 300;
+    }
+</style>

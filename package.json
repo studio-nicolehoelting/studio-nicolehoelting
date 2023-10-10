@@ -1,0 +1,28 @@
+{
+  "name": "studio-nicolehoelting-astro",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.0.1",
+    "astro": "^3.2.3",
+    "astro-capo": "^0.0.1",
+    "astro-icon": "^0.8.1",
+    "astro-robots-txt": "^1.0.0",
+    "markdown-it": "^13.0.2",
+    "sanitize-html": "^2.11.0",
+    "swiper": "^10.3.1"
+  },
+  "devDependencies": {
+    "@types/markdown-it": "^13.0.2",
+    "@types/sanitize-html": "^2.9.1",
+    "sass": "^1.69.0",
+    "sharp": "^0.32.6"
+  }
+}

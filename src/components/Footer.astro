@@ -1,0 +1,40 @@
+---
+import Icon from "astro-icon";
+---
+
+<div id="footer">
+    <a
+        href="https://www.instagram.com/nicolehoelting_studio/"
+        target="_blank"
+        class="instagram"
+    >
+        <Icon name="fa:instagram" class="icon" />
+    </a>
+    <p><a href="./datenschutz-impressum/">Impressum & Datenschutz</a></p>
+</div>
+
+<style lang="scss">
+    #footer {
+        display: flex;
+        justify-content: flex-end;
+        height: auto;
+
+        p {
+            margin: 2px;
+        }
+
+        .instagram {
+            // width: auto;
+            height: 20px;
+            display: inline-block;
+            margin-right: 5px;
+
+            .icon {
+                display: block;
+                height: 100%;
+                // width: auto;
+                padding: 5px 3px 0 3px;
+            }
+        }
+    }
+</style>

@@ -1,0 +1,55 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import NavigationBar from "@components/NavigationBar.astro";
+import FederSidebar from "@components/FederSidebar.astro";
+import Footer from "@components/Footer.astro";
+
+interface Props {
+    title: string;
+    activePage: string;
+    federAnimation?: string;
+    federZitat: string;
+    federAuthor: string;
+}
+
+const { title, activePage, federAnimation, federAuthor, federZitat } =
+    Astro.props;
+---
+
+<BaseLayout {title}>
+    <slot slot="head" name="head" />
+    <div id="pageContainer">
+        <NavigationBar active={activePage} />
+        <div id="viewContainer">
+            <FederSidebar
+                zitat={federZitat}
+                author={federAuthor}
+                animation={federAnimation}
+            />
+            <div id="content">
+                <slot />
+            </div>
+        </div>
+        <Footer />
+    </div>
+</BaseLayout>
+
+<style lang="scss">
+    #pageContainer {
+        max-width: 1400px;
+        margin: 0 auto;
+        height: 100%;
+
+        #viewContainer {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-areas: "feather content";
+            max-width: 100%;
+
+            #content {
+                max-width: 100%;
+                overflow: auto;
+            }
+        }
+    }
+</style>

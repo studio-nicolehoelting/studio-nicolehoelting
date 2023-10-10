@@ -1,0 +1,147 @@
+---
+import { Image } from "astro:assets";
+import logoImg from "@images/logo.png";
+
+interface Props {
+    active?: string;
+}
+
+const { active = "/" } = Astro.props;
+
+const menu = [
+    ["/", "Home"],
+    ["/living/", "Living"],
+    ["/projects/", "Projects"],
+    ["/blog/", "Blog"],
+    ["/artworks/", "Artworks"],
+    ["/pricing/", "Pricing"],
+    ["/about/", "About"],
+    ["/contact/", "Contact"],
+];
+---
+
+<div class="navbar">
+    <div class="logo-container">
+        <Image class="logo" src={logoImg} alt="Logo" />
+    </div>
+    <ul>
+        {
+            menu.map(([link, name]) => {
+                if (link === active) {
+                    return (
+                        <li class="element active">
+                            <span>{name}</span>
+                        </li>
+                    );
+                }
+                return (
+                    <li class="element">
+                        <a href={link}>{name}</a>
+                    </li>
+                );
+            })
+        }
+    </ul>
+</div>
+
+<style lang="scss">
+    .navbar {
+        box-sizing: border-box;
+        padding-top: 0px;
+        background: #666;
+        margin: 0px;
+        padding: 0px;
+        // height: 100px;
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        grid-template-areas: "logo nav";
+        // overflow-x: hidden;
+
+        @media (max-width: $mobile_max_width) {
+            grid-template-columns: auto;
+            grid-template-rows: auto auto;
+            grid-template-areas: "logo" "nav";
+        }
+
+        ul {
+            max-width: 100%;
+            padding: 10px 0px;
+            margin: 0px 5px;
+            padding-top: 25px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            grid-area: nav;
+
+            @media (max-width: $mobile_max_width) {
+                padding-top: 0;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+            }
+
+            .element {
+                padding: 3px 10px;
+                transition: all 100ms;
+                text-align: center;
+                font-size: 1.5rem;
+
+                @media (max-width: $mobile_max_width) {
+                    padding: 5px;
+                    background-color: #555;
+                }
+
+                &,
+                & * {
+                    font-family: "Roboto thin", Calibri;
+                }
+
+                &:hover > :is(a, span) {
+                    text-decoration: none;
+                    color: white;
+                    border-bottom: 2px #fff solid;
+                }
+
+                &.active span {
+                    // font-weight: bold;
+                    // margin: 0px;
+                    // padding: 0px;
+                    // color: white;
+                    border-bottom: 3px #fff solid;
+
+                    * {
+                        cursor: pointer;
+                    }
+                }
+            }
+            a {
+                text-decoration: none;
+            }
+
+            li,
+            li > a {
+                color: white;
+                list-style: none;
+                margin-top: 5px;
+            }
+        }
+
+        .logo-container {
+            grid-area: logo;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            .logo {
+                width: 200px;
+                padding: 10px 15px;
+
+                @media (max-width: $mobile_max_width) {
+                    margin: 10px auto;
+                }
+            }
+        }
+    }
+</style>

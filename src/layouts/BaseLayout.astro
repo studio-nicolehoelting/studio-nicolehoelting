@@ -1,0 +1,61 @@
+---
+// import { pwaInfo } from "virtual:pwa-info";
+import type { TransitionAnimationValue } from "astro";
+import { Head } from "astro-capo";
+import "@styles/styles.scss";
+// import pwaSetup from "pwaSetup.ts";
+
+// let manifest = pwaSetup.manifest || {};
+
+interface Props {
+    title: string;
+    // pwaMinimal?: boolean;
+    transitionAnimate?: TransitionAnimationValue;
+}
+
+const { title, transitionAnimate } = Astro.props;
+---
+
+<!doctype html>
+<html lang="de" transition:animate={transitionAnimate}>
+    <Head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
+        />
+        <link rel="icon" type="image/ico" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="sitemap" href="/sitemap-index.xml" />
+        {false && (<!-- <meta name="theme-color" content={manifest.theme_color} />
+        <meta name="application-name" content={manifest.name} />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content={manifest.name} />
+        <meta name="description" content="Löffelweise Glück App" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="msapplication-config" content="/icons/browserconfig.xml" />
+        <meta name="msapplication-TileColor" content={manifest.theme_color} />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <link
+            rel="alternate"
+            type="application/rss+xml"
+            title="RSS Feed für unsere Rezepte"
+            href="/rss.xml"
+        /> -->)}
+        <title>{title}</title>
+        {false && <script src="/src/scripts/pwa.ts" type="module" />}
+        <slot name="head" />
+    </Head>
+    <body>
+        <slot />
+    </body>
+</html>
+
+<style>
+    body {
+        background-color: var(--background-color);
+    }
+</style>
