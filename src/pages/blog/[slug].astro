@@ -1,0 +1,142 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection, type CollectionEntry } from "astro:content";
+import { getImage } from "astro:assets";
+import { Schema } from "astro-seo-schema";
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+export const getStaticPaths = (async () => {
+    const blogs = await getCollection("blog").then((blogs) =>
+        blogs
+            .filter(
+                (blog) =>
+                    blog.data.ankündigung !== true &&
+                    blog.data.untertitel &&
+                    blog.data.bild
+            )
+            .map((blog) => ({
+                params: {
+                    slug: blog.slug,
+                },
+                props: {
+                    blog,
+                },
+            }))
+    );
+
+    return blogs;
+}) satisfies GetStaticPaths;
+
+interface Props {
+    blog: CollectionEntry<"blog">;
+}
+
+const { slug } = Astro.params;
+const { blog } = Astro.props;
+if (!slug) throw new Error("No slug provided");
+
+const Content = await blog.render().then((content) => content.Content);
+if (!blog.data.bild) throw new Error("No image provided");
+const thumbnail = await getImage({ src: blog.data.bild });
+---
+
+<BaseLayout title={blog.data.titel + " - Studio NH"}>
+    <Schema
+        item={{
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            mainEntityOfPage: {
+                "@type": "WebPage",
+                "@id": Astro.site + "/blog/" + blog.slug,
+            },
+            headline: blog.data.titel,
+            author: {
+                "@type": "Person",
+                name: "Nicole Hölting",
+                url: Astro.site + "/about/",
+            },
+            image: thumbnail.src,
+            datePublished: blog.data.datum.toISOString(),
+            articleBody: blog.body,
+        }}
+        slot="head"
+    />
+    <div class="page_container p001">
+        <h1>{blog.data.titel}</h1>
+        <h2>{blog.data.untertitel}</h2>
+        <div class="content_container">
+            <Content />
+        </div>
+    </div>
+</BaseLayout>
+
+<style lang="scss">
+    body {
+        background-color: #666;
+        max-width: 1400px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+
+        :global(*) {
+            color: #ddd;
+        }
+    }
+
+    h1 {
+        text-align: center;
+        margin: 2vw;
+        margin-bottom: 0;
+        font-size: 5vw;
+    }
+
+    h2 {
+        text-align: center;
+        margin: 2vw;
+        margin-top: 0;
+        font-size: 2vw;
+    }
+
+    .content_container {
+        display: flex;
+        // grid-template-columns: repeat(auto-fit, 1fr);
+        margin: 5vw;
+        flex-direction: row;
+        flex-wrap: wrap;
+        // grid-gap: 5vw;
+        justify-content: space-around;
+
+        > :global(*) {
+            margin-bottom: 2cm;
+        }
+
+        :global(p:has(img)) {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+
+            :global(img) {
+                width: 100%;
+                height: auto;
+                border: 5px solid #ddd;
+                display: block;
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+        }
+
+        :global(p) {
+            max-width: 40%;
+            text-align: justify;
+            font-size: 14pt;
+
+            &:nth-child(even):not(:has(img)) {
+                grid-column: span 2;
+            }
+
+            &:has(img) {
+                // grid-column: span 2;
+            }
+        }
+    }
+</style>

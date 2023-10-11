@@ -1,0 +1,117 @@
+---
+import { getCollection } from "astro:content";
+import DefaultLayout from "@layouts/DefaultLayout.astro";
+import { Image } from "astro:assets";
+
+const blogs = await getCollection("blog").then((blogs) =>
+    blogs.sort((a, b) => (a.data.datum < b.data.datum ? 1 : -1))
+);
+---
+
+<DefaultLayout
+    title="Blog Studio NH"
+    activePage="/blog/"
+    federAuthor="Theodor Fontane"
+    federZitat="Der Zauber steckt im Detail."
+    federAnimation="translateY(200px) translateX(25px) rotate(-40deg)"
+>
+    <main class="blog-container">
+        {
+            blogs.map((blog) => {
+                if (blog.data.ankündigung == true) {
+                    return (
+                        <div class="blog-display ankündigung">
+                            <h1>Freu dich auf mehr</h1>
+                            <h2>
+                                {blog.data.titel}
+                                <br />
+                                {(blog.data.datum.getMonth() + 1).toString() +
+                                    "." +
+                                    (
+                                        blog.data.datum.getFullYear() % 2000
+                                    ).toString() +
+                                    "."}
+                            </h2>
+                        </div>
+                    );
+                } else {
+                    if (!blog.data.untertitel || !blog.data.bild)
+                        throw new Error("Untertitel oder Bild fehlt");
+                    return (
+                        <div class="blog-display">
+                            <Image
+                                src={blog.data.bild}
+                                alt={`Titelbild für den Blog "${blog.data.titel}"`}
+                            />
+                            <h1>{blog.data.titel}</h1>
+                            <h2>{blog.data.untertitel}</h2>
+                            <a href={`./${blog.slug}/`} target="_blank">
+                                mehr
+                            </a>
+                        </div>
+                    );
+                }
+            })
+        }
+    </main>
+</DefaultLayout>
+
+<style lang="scss">
+    .blog-container {
+        box-sizing: border-box;
+        max-width: 100%;
+        margin: 2cm;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+
+        .blog-display {
+            background-color: #666;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+
+            &.ankündigung {
+                h1 {
+                    margin: auto 0 0 0;
+                }
+
+                h2 {
+                    margin: 0 0 auto 0;
+                }
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+                padding: 1vw;
+                padding-bottom: 0;
+            }
+
+            h1 {
+                margin: 1vw;
+                margin-bottom: 0;
+                font-size: 2vw;
+                text-align: center;
+                color: #ddd;
+            }
+
+            h2 {
+                margin: 1vw;
+                font-size: 1vw;
+                text-align: center;
+                color: #ddd;
+            }
+
+            a {
+                position: relative;
+                display: inline;
+                width: auto;
+                color: #ddd;
+                margin-top: auto;
+                margin-bottom: 2vh;
+                text-align: center;
+            }
+        }
+    }
+</style>
