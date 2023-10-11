@@ -112,7 +112,11 @@ const parser = new markdownIt({
         }
 
         .mainText {
-            color: white;
+            &,
+            :global(*) {
+                color: white;
+            }
+
             margin-left: 15px;
             max-width: 100%;
             max-height: 100%;
