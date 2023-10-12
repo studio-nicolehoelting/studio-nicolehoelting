@@ -37,7 +37,7 @@ if (!slug) throw new Error("No slug provided");
 
 const Content = await blog.render().then((content) => content.Content);
 if (!blog.data.bild) throw new Error("No image provided");
-const thumbnail = await getImage({ src: blog.data.bild });
+const thumbnail = await getImage({ src: blog.data.bild, quality: "mid" });
 ---
 
 <BaseLayout title={blog.data.titel + " - Studio NH"}>

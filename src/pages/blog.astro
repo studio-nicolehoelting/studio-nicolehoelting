@@ -42,6 +42,7 @@ const blogs = await getCollection("blog").then((blogs) =>
                             <Image
                                 src={blog.data.bild}
                                 alt={`Titelbild für den Blog "${blog.data.titel}"`}
+                                quality="mid"
                             />
                             <h1>{blog.data.titel}</h1>
                             <h2>{blog.data.untertitel}</h2>

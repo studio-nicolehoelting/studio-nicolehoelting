@@ -20,6 +20,7 @@ const Content = await artwork.render().then((content) => content.Content);
                     <Image
                         src={bild}
                         alt={`${artwork.data.titel}: #${index}`}
+                        quality="mid"
                     />
                 ))
             }
