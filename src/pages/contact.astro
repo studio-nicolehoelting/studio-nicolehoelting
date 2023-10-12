@@ -1,0 +1,125 @@
+---
+import { Image } from "astro:assets";
+import { Schema } from "astro-seo-schema";
+import DefaultLayout from "@layouts/DefaultLayout.astro";
+import dreamOnImg from "@images/contact/dreamon-4-1.jpg";
+---
+
+<DefaultLayout
+    title="Contact - Studio Nicole Hölting"
+    activePage="/contact/"
+    federZitat="Alle unsere Träume können sich erfüllen, wenn wir den Mut haben, ihnen zu folgen."
+    federAuthor="Walt Disney"
+    federAnimation="translateY(320px) rotate(-20deg) translateX(20px)"
+>
+    <Schema
+        slot="head"
+        item={{
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            mainContentOfPage: {
+                "@type": "WebPageElement",
+                cssSelector: ".contact",
+            },
+        }}
+    />
+    <div class="contact_container">
+        <main class="contact">
+            <p id="name">Nicole Hölting</p>
+            <p id="street">Starenweg 10</p>
+            <p id="city">33034 Brakel</p>
+            <p id="phone">FON: +49 152-53484096</p>
+            <p id="mail">
+                MAIL: <a
+                    href="mailto:studio@nicolehoelting.de?subject=Kontakt"
+                    class="fancy-link">studio&#064;nicolehoelting&#046;de</a
+                >
+            </p>
+        </main>
+        <div id="qr">
+            <img src="/images/contact/qr-code.svg" alt="" />
+        </div>
+        <Image id="img-end" src={dreamOnImg} alt="Dream On" />
+    </div>
+</DefaultLayout>
+
+<style lang="scss">
+    :global(#feder) {
+        border-bottom-right-radius: 0 !important;
+    }
+    :global(#content) {
+        max-height: 100%;
+    }
+    :global(#viewContainer) {
+        @media (max-width: $mobile_max_width) {
+            padding-bottom: 0 !important;
+        }
+    }
+
+    .contact_container {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: 1fr auto;
+        grid-template-areas:
+            "contact qr"
+            "dreamon dreamon";
+        max-width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+
+        @media (max-width: $mobile_max_width) {
+            grid-template-columns: auto;
+            grid-template-rows: 1fr auto;
+            grid-template-areas:
+                "contact"
+                "dreamon";
+        }
+
+        > * {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .contact {
+            grid-area: contact;
+            font-size: 1.6em;
+            margin: 100px 0 0 60px;
+
+            > p {
+                width: auto;
+            }
+        }
+
+        #qr {
+            grid-area: qr;
+            margin: 0 auto;
+            max-width: 5cm;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            @media (max-width: $mobile_max_width) {
+                display: none;
+            }
+
+            img {
+                width: 100%;
+                margin-bottom: 3cm;
+            }
+        }
+        #img-end {
+            grid-area: dreamon;
+            filter: grayscale(1);
+            transition: all 500ms;
+
+            &:hover {
+                filter: grayscale(0);
+            }
+
+            @media (max-width: $mobile_max_width) {
+                border-radius: 0 0 30px 30px;
+                filter: grayscale(0);
+            }
+        }
+    }
+</style>
