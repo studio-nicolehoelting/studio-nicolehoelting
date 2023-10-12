@@ -38,13 +38,13 @@ const { title, transitionAnimate } = Astro.props;
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="msapplication-config" content="/icons/browserconfig.xml" />
         <meta name="msapplication-TileColor" content={manifest.theme_color} />
-        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="msapplication-tap-highlight" content="no" /> -->)}
         <link
             rel="alternate"
             type="application/rss+xml"
-            title="RSS Feed für unsere Rezepte"
+            title="RSS Feed für meinen Blog"
             href="/rss.xml"
-        /> -->)}
+        />
         <title>{title}</title>
         {false && <script src="/src/scripts/pwa.ts" type="module" />}
         <slot name="head" />
