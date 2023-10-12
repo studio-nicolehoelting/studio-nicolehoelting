@@ -48,6 +48,11 @@ const { title, activePage, federAnimation, federAuthor, federZitat } =
             background-color: #e6e6e6;
             border-radius: 0 0 0 30px;
 
+            @media (max-width: $mobile_max_width) {
+                border-radius: 0 0 30px 30px;
+                padding-bottom: 0.5cm;
+            }
+
             #content {
                 max-width: 100%;
                 overflow: auto;

@@ -60,10 +60,14 @@ const blogs = await getCollection("blog").then((blogs) =>
     .blog-container {
         box-sizing: border-box;
         max-width: 100%;
-        margin: 2cm;
+        margin: clamp(1rem, 5vw, 2cm);
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         grid-gap: 20px;
+
+        @media (max-width: $mobile_max_width) {
+            grid-template-columns: auto;
+        }
 
         .blog-display {
             background-color: #666;
@@ -72,6 +76,8 @@ const blogs = await getCollection("blog").then((blogs) =>
             flex-direction: column;
 
             &.ankündigung {
+                min-height: 5cm;
+
                 h1 {
                     margin: auto 0 0 0;
                 }
@@ -84,23 +90,25 @@ const blogs = await getCollection("blog").then((blogs) =>
             img {
                 width: 100%;
                 height: auto;
-                padding: 1vw;
+                padding: 1rem;
                 padding-bottom: 0;
             }
 
-            h1 {
+            h1,
+            h2 {
                 margin: 1vw;
-                margin-bottom: 0;
-                font-size: 2vw;
                 text-align: center;
                 color: #ddd;
+                word-wrap: break-word;
+            }
+
+            h1 {
+                margin-bottom: 0;
+                font-size: 2rem;
             }
 
             h2 {
-                margin: 1vw;
-                font-size: 1vw;
-                text-align: center;
-                color: #ddd;
+                font-size: 1rem;
             }
 
             a {

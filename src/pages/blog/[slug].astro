@@ -88,6 +88,10 @@ const thumbnail = await getImage({ src: blog.data.bild });
         margin: 2vw;
         margin-bottom: 0;
         font-size: 5vw;
+
+        @media (max-width: $mobile_max_width) {
+            font-size: 2.5rem;
+        }
     }
 
     h2 {
@@ -95,6 +99,10 @@ const thumbnail = await getImage({ src: blog.data.bild });
         margin: 2vw;
         margin-top: 0;
         font-size: 2vw;
+
+        @media (max-width: $mobile_max_width) {
+            font-size: 1.5rem;
+        }
     }
 
     .content_container {
@@ -115,6 +123,10 @@ const thumbnail = await getImage({ src: blog.data.bild });
             display: flex;
             flex-direction: column;
 
+            @media (max-width: $mobile_max_width) {
+                width: 100%;
+            }
+
             :global(img) {
                 width: 100%;
                 height: auto;
@@ -129,6 +141,10 @@ const thumbnail = await getImage({ src: blog.data.bild });
             max-width: 40%;
             text-align: justify;
             font-size: 14pt;
+
+            @media (max-width: $mobile_max_width) {
+                max-width: 100%;
+            }
 
             &:nth-child(even):not(:has(img)) {
                 grid-column: span 2;
