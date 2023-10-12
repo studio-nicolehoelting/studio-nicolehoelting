@@ -35,7 +35,18 @@ const blogCollection = defineCollection({
         }),
 });
 
+const artworksCollection = defineCollection({
+    type: "content",
+    schema: ({ image }) =>
+        z.object({
+            position: z.number(),
+            titel: z.string(),
+            bilder: z.array(image()),
+        }),
+});
+
 export const collections = {
     projects: projectsCollection,
     blog: blogCollection,
+    artworks: artworksCollection,
 };

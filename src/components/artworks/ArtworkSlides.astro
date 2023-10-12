@@ -1,0 +1,76 @@
+---
+import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+
+type Artwork = CollectionEntry<"artworks">;
+
+interface Props {
+    artwork: Artwork;
+}
+
+const { artwork } = Astro.props;
+const Content = await artwork.render().then((content) => content.Content);
+---
+
+<swiper-slide>
+    <div class="container">
+        <div class="imgs">
+            {
+                artwork.data.bilder.map((bild, index) => (
+                    <Image
+                        src={bild}
+                        alt={`${artwork.data.titel}: #${index}`}
+                    />
+                ))
+            }
+        </div>
+        <div class="text">
+            <Content />
+        </div>
+    </div>
+</swiper-slide>
+
+<style lang="scss">
+    swiper-slide {
+        height: 100%;
+    }
+
+    .container {
+        width: 100%;
+        height: 100%;
+        padding: 10px 50px;
+        overflow-y: auto;
+
+        .imgs {
+            height: 80%;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-around;
+
+            @media (max-width: $mobile_max_width) {
+                flex-direction: column;
+                height: auto;
+                max-height: 80%;
+            }
+
+            img {
+                height: 100%;
+                width: auto;
+                max-width: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .text :global(*) {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            /* position: absolute; */
+            /* bottom: 8px; */
+            margin-top: 10px;
+            width: 100%;
+            text-align: center;
+        }
+    }
+</style>
