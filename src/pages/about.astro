@@ -1,0 +1,100 @@
+---
+import DefaultLayout from "@layouts/DefaultLayout.astro";
+import SlideImage from "@components/SlideImage.astro";
+import backgroundNicole from "@images/about/foto-nicole.jpg";
+import backgroundRaumgestalt from "@images/about/raumgestalt.jpg";
+---
+
+<DefaultLayout
+    title="About - Studio Nicole Hölting"
+    activePage="/about/"
+    federAuthor="Albert Einstein"
+    federZitat="Phantasie ist wichtiger als Wissen, denn Wissen ist begrenzt."
+>
+    <div class="slideimages">
+        <SlideImage img={backgroundNicole} id="slideimage_nicole" />
+        <div id="beschreibung_nicole">
+            <p class="header">Nicole Hölting</p>
+            <p>
+                Das bin ich. Der kreative Kopf des Studios. Kleine Dinge mit
+                großer Liebe tun. Mit diesen Worten beschreibe ich gern meine
+                studioArbeit, mein Gespür für Farben, Material und Stimmungen.
+                Meinen Blick fürs Detail. Ich mag das Schlichte. Das Schöne. Bei
+                einem Latte Macchiato am Nachmittag starte ich noch einmal durch
+                und mache mein Hobby zum Beruf. Beflügelnd. Einfach. Los geht's!
+            </p>
+        </div>
+        <SlideImage
+            img={backgroundRaumgestalt}
+            top
+            id="slideimage_raumgestalt"
+        />
+        <div id="beschreibung_raumgestalt">
+            <p class="header">
+                STUDIO für RaumGestalt.
+                <p>
+                    Raum konzeptionieren. Gestalten. Lebensraum. Wohnkonzept.
+                    Raum für Ideen. Raum für Design & Ästhetik. Raum nimmt
+                    Gestalt an. Studio gestaltet.<br />
+                     Die Symbiose aus Raum & Gestalt beschreibt das, was ich
+                    liebe: Gestalten mit hohem Anspruch an Auswahl &
+                    Verarbeitung von Materialien - einfallsreich, stilvoll &
+                    individuell. Federleicht wird jeder Raum zu etwas
+                    Besonderem!
+                </p>
+            </p>
+        </div>
+    </div>
+
+    <style lang="scss">
+        .slideimages {
+            margin: 0 1cm;
+            margin-top: 1.3cm;
+            height: auto !important;
+            box-sizing: border-box;
+            display: grid;
+            grid-gap: 1cm;
+            grid-template-columns: repeat(2, minmax(0, auto));
+            grid-template-rows: repeat(2, auto);
+            grid-template-areas:
+                "slideimage_nicole slideimage_raumgestalt"
+                "beschreibung_nicole beschreibung_raumgestalt";
+
+            @media (max-width: $mobile_max_width) {
+                grid-template-columns: auto;
+                grid-template-rows: repeat(4, auto);
+                grid-template-areas:
+                    "slideimage_nicole"
+                    "beschreibung_nicole"
+                    "slideimage_raumgestalt"
+                    "beschreibung_raumgestalt";
+            }
+        }
+
+        #beschreibung_raumgestalt {
+            grid-area: beschreibung_raumgestalt;
+        }
+        #beschreibung_nicole {
+            grid-area: beschreibung_nicole;
+        }
+        #slideimage_nicole {
+            grid-area: slideimage_nicole;
+        }
+        #slideimage_raumgestalt {
+            grid-area: slideimage_raumgestalt;
+        }
+
+        #beschreibung_nicole,
+        #beschreibung_raumgestalt {
+            padding: 10px;
+            border: 1px gray solid;
+            position: relative;
+
+            .header {
+                text-transform: uppercase;
+                font-size: 1.4em;
+                font-weight: 100;
+            }
+        }
+    </style>
+</DefaultLayout>

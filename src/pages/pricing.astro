@@ -1,17 +1,8 @@
 ---
-import { getImage } from "astro:assets";
 import DefaultLayout from "@layouts/DefaultLayout.astro";
-import backgroundPreisgestaltungUnoptimized from "@images/pricing/deko.jpg";
-import backgroundGutscheinUnoptimized from "@images/pricing/gutschein.jpg";
-
-const backgroundPreisgestaltung = await getImage({
-    src: backgroundPreisgestaltungUnoptimized,
-    quality: "mid",
-});
-const backgroundGutschein = await getImage({
-    src: backgroundGutscheinUnoptimized,
-    quality: "mid",
-});
+import backgroundPreisgestaltung from "@images/pricing/deko.jpg";
+import backgroundGutschein from "@images/pricing/gutschein.jpg";
+import SlideImage from "@components/SlideImage.astro";
 ---
 
 <DefaultLayout
@@ -22,15 +13,12 @@ const backgroundGutschein = await getImage({
     federAnimation="translateY(320px) rotate(40deg)"
 >
     <div class="slideimages">
-        <div class="slideimage_container" id="slideimage_preisgestaltung">
-            <div
-                class="slideimage"
-                style={`background-image: url('${backgroundPreisgestaltung.src}')`}
-            >
-            </div>
-        </div>
+        <SlideImage
+            img={backgroundPreisgestaltung}
+            id="slideimage_preisgestaltung"
+        />
         <div id="beschreibung_preisgestaltung">
-            <p id="header">PREISGESTALTUNG</p>
+            <p class="header">PREISGESTALTUNG</p>
             <p>
                 Transparenz ist mir wichtig.<br />
                  Grundlage meiner Beratungstätigkeit ist ein Dienstvertrag. Ich
@@ -42,15 +30,12 @@ const backgroundGutschein = await getImage({
                  So kannst du die Kosten kalkulieren.
             </p>
         </div>
-        <div class="slideimage_container" id="slideimage_geschenkgutschein">
-            <div
-                class="slideimage"
-                style={`background-image: url('${backgroundGutschein.src}')`}
-            >
-            </div>
-        </div>
+        <SlideImage
+            img={backgroundGutschein}
+            id="slideimage_geschenkgutschein"
+        />
         <div id="beschreibung_geschenkgutschein">
-            <p id="header">Geschenkgutschein</p>
+            <p class="header">Geschenkgutschein</p>
             <p>
                 Kick Off für die eigene Kunstsammlung, eine Ideenlieferung, ein
                 langanhaltendes Wohngefallen! Der Geschenkgutschein. <br />
@@ -80,23 +65,15 @@ const backgroundGutschein = await getImage({
         grid-template-areas:
             "slideimage_preisgestaltung slideimage_geschenkgutschein"
             "beschreibung_preisgestaltung beschreibung_geschenkgutschein";
-    }
-    .slideimage_container {
-        height: 100%;
-        aspect-ratio: 1 / 1;
-    }
 
-    .slideimage {
-        background-repeat: no-repeat;
-        background-position: bottom;
-        background-size: cover;
-        overflow: hidden;
-        height: 100%;
-        width: 100%;
-        transition: all 1000ms;
-
-        &:hover {
-            background-position: top;
+        @media (max-width: $mobile_max_width) {
+            grid-template-columns: auto;
+            grid-template-rows: repeat(4, auto);
+            grid-template-areas:
+                "slideimage_preisgestaltung"
+                "beschreibung_preisgestaltung"
+                "slideimage_geschenkgutschein"
+                "beschreibung_geschenkgutschein";
         }
     }
 
@@ -118,6 +95,11 @@ const backgroundGutschein = await getImage({
         padding: 10px;
         border: 1px gray solid;
         position: relative;
-        /* margin-top: 20px; */
+
+        .header {
+            text-transform: uppercase;
+            font-size: 1.4em;
+            font-weight: 100;
+        }
     }
 </style>
