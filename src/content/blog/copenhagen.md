@@ -128,7 +128,10 @@ Viel Spaß beim Shoppen!
 
 ![Husband Schild](../../images/blog/copenhagen/husband-schild_q.jpg)
 
-<a href="https://www.brostecopenhagen.com/de/" target="_blank" rel="noopener noreferrer">www.brostecopenhagen.com</a> <a href="https://www.normann-copenhagen.com/de-DE" target="_blank" rel="noopener noreferrer" >www.normann-copenhagen.com</a> <a href="https://www.bolia.com/de-de/" target="_blank" rel="noopener noreferrer">www.bolia.com</a> <a href="https://www.boconcept.com/de-de/" target="_blank" rel="noopener noreferrer" >www.boconcept.com</a>
+<a href="https://www.brostecopenhagen.com/de/" target="_blank" rel="noopener noreferrer">www.brostecopenhagen.com</a><br>
+<a href="https://www.normann-copenhagen.com/de-DE" target="_blank" rel="noopener noreferrer" >www.normann-copenhagen.com</a> <br>
+<a href="https://www.bolia.com/de-de/" target="_blank" rel="noopener noreferrer">www.bolia.com</a><br>
+<a href="https://www.boconcept.com/de-de/" target="_blank" rel="noopener noreferrer" >www.boconcept.com</a>
 
 Finde mehr und folge mir auf
 <a href="https://www.instagram.com/nicolehoelting_studio/">Instagram</a> oder Facebook unter "nicolehoelting_studio".

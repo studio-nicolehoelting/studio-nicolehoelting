@@ -64,10 +64,11 @@ const blogs = await getCollection("blog").then((blogs) =>
         margin: clamp(1rem, 5vw, 2cm);
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        grid-gap: 20px;
+        grid-gap: max(20px, 7.5vw);
 
         @media (max-width: $mobile_max_width) {
             grid-template-columns: auto;
+            grid-gap: 20px;
         }
 
         .blog-display {

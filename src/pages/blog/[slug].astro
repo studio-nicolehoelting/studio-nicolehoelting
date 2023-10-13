@@ -61,13 +61,13 @@ const thumbnail = await getImage({ src: blog.data.bild, quality: "mid" });
         }}
         slot="head"
     />
-    <div class="page_container p001">
+    <main class="page_container">
         <h1>{blog.data.titel}</h1>
         <h2>{blog.data.untertitel}</h2>
         <div class="content_container">
             <Content />
         </div>
-    </div>
+    </main>
 </BaseLayout>
 
 <style lang="scss">
@@ -106,26 +106,22 @@ const thumbnail = await getImage({ src: blog.data.bild, quality: "mid" });
     }
 
     .content_container {
-        display: flex;
-        // grid-template-columns: repeat(auto-fit, 1fr);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
         margin: 5vw;
-        flex-direction: row;
-        flex-wrap: wrap;
-        // grid-gap: 5vw;
-        justify-content: space-around;
+        grid-gap: 5vw;
+
+        @media (max-width: $mobile_max_width) {
+            grid-template-columns: auto;
+        }
 
         > :global(*) {
             margin-bottom: 2cm;
         }
 
         :global(p:has(img)) {
-            width: 40%;
             display: flex;
             flex-direction: column;
-
-            @media (max-width: $mobile_max_width) {
-                width: 100%;
-            }
 
             :global(img) {
                 width: 100%;
@@ -135,10 +131,23 @@ const thumbnail = await getImage({ src: blog.data.bild, quality: "mid" });
                 margin-top: auto;
                 margin-bottom: auto;
             }
+
+            &.quadrat {
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+            &.breit {
+                grid-column: span 3;
+                grid-row: span 1;
+            }
+            &.hoch {
+                grid-column: span 1;
+                grid-row: span 3;
+            }
         }
 
         :global(p) {
-            max-width: 40%;
+            max-width: 100%;
             text-align: justify;
             font-size: 14pt;
 
@@ -146,13 +155,41 @@ const thumbnail = await getImage({ src: blog.data.bild, quality: "mid" });
                 max-width: 100%;
             }
 
-            &:nth-child(even):not(:has(img)) {
+            &:not(:has(img)).breit {
                 grid-column: span 2;
             }
 
-            &:has(img) {
-                // grid-column: span 2;
+            @media (max-width: calc($mobile_max_width * 1.5)) {
+                grid-column: span 2;
             }
         }
     }
 </style>
+
+<script>
+    const images = Array.from(
+        document.querySelectorAll(
+            ".content_container > p > img, .content_container > img"
+        )
+    ) as HTMLImageElement[];
+    images.forEach((img) => {
+        const width = Number(img.attributes.getNamedItem("width")?.value);
+        const height = Number(img.attributes.getNamedItem("height")?.value);
+        const ratio = width / height;
+
+        if (0.9 < ratio && ratio < 1.1) {
+            img.parentElement?.classList.add("quadrat");
+        } else if (ratio > 1.5) {
+            img.parentElement?.classList.add("breit");
+        } else if (ratio < 0.5) {
+            img.parentElement?.classList.add("hoch");
+        }
+    });
+
+    const texte = Array.from(
+        document.querySelectorAll(".content_container > p:not(:has(img))")
+    ) as HTMLParagraphElement[];
+    texte.forEach((text, index) => {
+        if (index % 2 === 0) text.classList.add("breit");
+    });
+</script>

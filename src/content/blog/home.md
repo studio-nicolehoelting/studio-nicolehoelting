@@ -7,11 +7,11 @@ bild: ../../images/blog/home/Haus_ganz_q.jpg
 
 ![Haus ganz](../../images/blog/home/Haus_ganz_q.jpg)
 
-![Überschrift](../../images/blog/home/Ueberschrift_final_2-5h.jpg)
-
 Mit einem "Haus im Haus" überraschte mich der Conceptstore ferm in Kopenhagen und stellte die Frage "What does 'home' mean to you?" Neben dem Haus: Stifte, eine Trittleiter und die klare Aufforderung, seine persönliche Auffassung von HOME zu verewigen. Spontan habe ich geschrieben:<br>
 <br>
 "ZUHAUSE bedeutet 'offene Arme'!"
+
+![Überschrift](../../images/blog/home/Ueberschrift_final_2-5h.jpg)
 
 Denn offene Arme symbolisieren für mich alles, was ich mit Zuhause verbinde.
 Zuhause ist mein Nest, mein Kokon, in dem ich warm, sicher und geborgen bin.
