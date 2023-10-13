@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import { Icon } from "astro-icon";
 import logoImg from "@images/logo.png";
 
 interface Props {
@@ -24,6 +25,7 @@ const menu = [
     <div class="logo-container">
         <Image class="logo" src={logoImg} alt="Logo" quality="mid" />
     </div>
+    <button class="mobile-nav-toggle"><Icon name="fa:bars" /></button>
     <ul>
         {
             menu.map(([link, name]) => {
@@ -77,9 +79,29 @@ const menu = [
             grid-area: nav;
 
             @media (max-width: $mobile_max_width) {
+                background-color: #555;
                 padding-top: 0;
-                flex-wrap: wrap;
-                justify-content: space-evenly;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                margin: 0;
+                position: fixed;
+                inset: 0 0 0 30%;
+                padding: 0 2em;
+                padding-top: min(20vh, 10rem);
+                z-index: 99;
+                overflow-y: auto;
+                transform: translateX(100%);
+                transition: transform 200ms ease-in-out;
+
+                @supports (backdrop-filter: blur(1rem)) {
+                    background-color: #555555a0;
+                    backdrop-filter: blur(1rem);
+                }
+            }
+
+            &.mobile-visible {
+                transform: translateX(0%);
             }
 
             .element {
@@ -90,12 +112,17 @@ const menu = [
 
                 @media (max-width: $mobile_max_width) {
                     padding: 5px;
+                    margin-bottom: 0.5rem;
                     background-color: #555;
                 }
 
-                &,
-                & * {
+                & > :is(a, span) {
                     font-family: "Roboto thin", Calibri;
+
+                    @media (max-width: $mobile_max_width) {
+                        display: block;
+                        width: 100%;
+                    }
                 }
 
                 &:hover > :is(a, span) {
@@ -131,6 +158,32 @@ const menu = [
             }
         }
 
+        .mobile-nav-toggle {
+            position: absolute;
+            width: 3rem;
+            aspect-ratio: 1;
+            top: 1.5rem;
+            right: 1.5rem;
+            z-index: 100;
+            border: 2px #e6e6e6 solid;
+            display: none;
+            background-color: #444;
+            color: unset;
+            padding: 0.25rem;
+            border-radius: 20%;
+
+            svg {
+                padding-top: 3px;
+                :global(*) {
+                    fill: #e6e6e6;
+                }
+            }
+
+            @media (max-width: $mobile_max_width) {
+                display: block;
+            }
+        }
+
         .logo-container {
             grid-area: logo;
             display: flex;
@@ -148,3 +201,15 @@ const menu = [
         }
     }
 </style>
+
+<script>
+    const nav = document.querySelector("nav.navbar") as HTMLElement;
+    const navToggle = nav.querySelector(
+        ".mobile-nav-toggle"
+    ) as HTMLButtonElement;
+    const ul = nav.querySelector("ul")!;
+
+    navToggle.addEventListener("click", () => {
+        ul.classList.toggle("mobile-visible");
+    });
+</script>
