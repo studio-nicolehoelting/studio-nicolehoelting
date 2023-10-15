@@ -15,13 +15,13 @@ const {
 } = Astro.props;
 ---
 
-<div id="feder">
+<aside id="feder">
     <Image id="feder-img" src={federImg} alt="" quality="mid" />
     <div class="sprueche">
         <p>{zitat}</p>
         <p class="author">({author})</p>
     </div>
-</div>
+</aside>
 
 <style lang="scss" define:vars={{ animation }}>
     #feder {
