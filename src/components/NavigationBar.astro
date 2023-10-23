@@ -25,7 +25,9 @@ const menu = [
     <div class="logo-container">
         <Image class="logo" src={logoImg} alt="Logo" quality="mid" />
     </div>
-    <button class="mobile-nav-toggle"><Icon name="fa:bars" /></button>
+    <button class="mobile-nav-toggle" aria-label="Toggle navigation bar"
+        ><Icon name="fa:bars" /></button
+    >
     <ul>
         {
             menu.map(([link, name]) => {
@@ -192,6 +194,7 @@ const menu = [
 
             .logo {
                 width: 200px;
+                height: auto;
                 padding: 10px 15px;
 
                 @media (max-width: $mobile_max_width) {
