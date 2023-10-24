@@ -4,6 +4,7 @@ import { getCollection, type CollectionEntry } from "astro:content";
 import { getImage } from "astro:assets";
 import { Schema } from "astro-seo-schema";
 import BaseLayout from "@layouts/BaseLayout.astro";
+import OpenGraphTags from "@components/OpenGraphTags.astro";
 
 export const getStaticPaths = (async () => {
     const blogs = await getCollection("blog").then((blogs) =>
@@ -59,6 +60,13 @@ const thumbnail = await getImage({ src: blog.data.bild, quality: "mid" });
             datePublished: blog.data.datum.toISOString(),
             articleBody: blog.body,
         }}
+        slot="head"
+    />
+    <OpenGraphTags
+        title={blog.data.titel}
+        description={blog.data.untertitel}
+        image={blog.data.bild}
+        imageQuality="mid"
         slot="head"
     />
     <main class="page_container">
