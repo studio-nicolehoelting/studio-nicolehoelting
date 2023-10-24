@@ -5,6 +5,7 @@ import { getImage } from "astro:assets";
 import { Schema } from "astro-seo-schema";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import OpenGraphTags from "@components/OpenGraphTags.astro";
+import NavigationBar from "@components/NavigationBar.astro";
 
 export const getStaticPaths = (async () => {
     const blogs = await getCollection("blog").then((blogs) =>
@@ -69,6 +70,7 @@ const thumbnail = await getImage({ src: blog.data.bild, quality: "mid" });
         imageQuality="mid"
         slot="head"
     />
+    <NavigationBar active={`/blog/${blog.slug}/`} />
     <main class="page_container">
         <h1>{blog.data.titel}</h1>
         <h2>{blog.data.untertitel}</h2>
