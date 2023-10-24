@@ -38,4 +38,10 @@ Mein Tipp: Koch dir einen leckeren Cappuccino, lass dich von meinen Ideen inspir
 
 Fühlst du dich dennoch unsicher, helfe ich dir selbstverständlich gern bei den Entscheidungen, begleite & berate ich dich bei Einkäufen, erstelle Shoppinglisten. Und/oder falls gewünscht, unterstütze ich auch bei der Koordination von Handwerkern. Raumdesign z.B. zum fairen m2-Preis! Nutze den unverbindlichen Kennenlern-Call oder schreibe mir eine Mail unter studio@nicolehoelting.de.
 
+![Vase](../../images/blog/macchiato/vase.jpg)
+
+![Papier](../../images/blog/macchiato/papier.jpg)
+
 Möchtest du mehr "Kaffee-Geschichten" lesen? Dann schau doch gern unter www.loeffelweise-glueck.de und probiere die leckeren [Rezeptideen #kaffee](https://loeffelweise-glueck.de/rezepte/?search=%23kaffee) ....
+
+![Pullover](../../images/blog/macchiato/pullover.jpg)
