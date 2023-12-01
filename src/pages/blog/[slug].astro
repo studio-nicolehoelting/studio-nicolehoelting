@@ -200,6 +200,7 @@ const thumbnail = await getImage({ src: blog.data.bild, quality: "mid" });
         document.querySelectorAll(".content_container > p:not(:has(img))")
     ) as HTMLParagraphElement[];
     texte.forEach((text, index) => {
-        if (index % 2 === 0) text.classList.add("breit");
+        //if (index % 2 === 0)
+        text.classList.add("breit");
     });
 </script>
