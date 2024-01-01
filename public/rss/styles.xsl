@@ -80,7 +80,7 @@ This file is in BETA. Please test and contribute to the discussion:
       <body class="bg-white">
         <nav class="container-md px-3 py-2 mt-2 mt-md-5 mb-5 markdown-body">
           <p class="bg-yellow-light ml-n1 px-1 py-1 mb-1">
-            <strong>Dies ist ein Web-Feed,</strong> auch bekannt als RSS feed. <strong>Abonniere</strong> indem du die URL aus der Adresszeile in deinen Newsreeder kopierst.
+            <strong>Dies ist ein Web-Feed,</strong> auch bekannt als RSS feed. <strong>Abonniere</strong> indem du die URL aus der Adresszeile in deinen Newsreader kopierst.
           </p>
           <p class="text-gray">
             Besuche <a href="https://aboutfeeds.com">About Feeds</a> um eine Einführung in Web-Feeds zu erhalten.
