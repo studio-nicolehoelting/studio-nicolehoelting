@@ -2,7 +2,7 @@
 titel: Vokabellehre
 untertitel: DAYBED
 datum: 2024-01-01
-bild: ../../images/blog/daybed/bilderlampen.jpg
+bild: ../../images/blog/daybed/header.jpg
 ---
 
 Als berühmtestes Exemplar dieses Möbelstücks gilt allgemein wohl das Daybed "Barcelona", das der Architekt & Möbeldesigner Ludwig Mies van der Rohe im Jahr 1930 entwarf.\
@@ -27,3 +27,5 @@ Die kleinen Alleskönner sind in Zeiten von knappem Wohnraum ideal für Menschen
 
 [www.carlhansen.com](https://www.carlhansen.com/de-de/shop-kollektion/sofas-daybeds/ow150/ow150-daybed-oak-soap-hr-re-wool-0108/variant/7711)\
 [www.ligne-roset.com](https://www.ligne-roset.com/de/modele/wohnen/sofas/daybed/2215)
+
+![Bilderlampen](../../images/blog/daybed/bilderlampen.jpg)
