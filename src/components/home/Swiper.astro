@@ -1,0 +1,80 @@
+---
+import { Image } from "astro:assets";
+import "swiper/swiper-bundle.css";
+
+import wohhnzimmerReinhardImg from "@images/home/swiper/wohnzimmer-reinhard.jpg";
+import ichImg from "@images/home/swiper/ich.jpg";
+import rundeStuehleImg from "@images/home/swiper/runde-stühle.jpg";
+import flurImg from "@images/home/swiper/flur.jpg";
+import schlafzimmerwandImg from "@images/home/swiper/schlafzimmerwand-reinhard.jpg";
+import nalaImg from "@images/home/swiper/nala.jpg";
+import kuecheReinhardImg from "@images/home/swiper/küche.jpg";
+import lumbertrailImg from "@images/home/swiper/lumber-trail.jpg";
+---
+
+<div class="swiper hero-swiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <Image src={wohhnzimmerReinhardImg} alt="Wohnzimmer Reinhard" />
+        </div>
+        <div class="swiper-slide"><Image src={ichImg} alt="Ich" /></div>
+        <div class="swiper-slide">
+            <Image src={rundeStuehleImg} alt="Runde Stühle" />
+        </div>
+        <div class="swiper-slide"><Image src={flurImg} alt="Flur" /></div>
+        <div class="swiper-slide">
+            <Image src={schlafzimmerwandImg} alt="Schlafzimmerwand Reinhard" />
+        </div>
+        <div class="swiper-slide"><Image src={nalaImg} alt="Nala" /></div>
+        <div class="swiper-slide">
+            <Image src={kuecheReinhardImg} alt="Küche" />
+        </div>
+        <div class="swiper-slide">
+            <Image src={lumbertrailImg} alt="Lumbertrail" />
+        </div>
+    </div>
+</div>
+
+<script>
+    import Swiper from "swiper/bundle";
+
+    new Swiper(".hero-swiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+            waitForTransition: true,
+        },
+        allowTouchMove: false,
+        loop: true,
+        effect: "fade",
+    });
+</script>
+
+<style lang="scss">
+    .swiper {
+        width: 100%;
+        height: 100%;
+
+        @media (min-width: $breakpoint-s) {
+            height: calc(100dvh - 80px);
+            z-index: -10;
+        }
+    }
+
+    .swiper-slide {
+        text-align: center;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>

@@ -12,13 +12,9 @@ const { title } = Astro.props;
 
 <BaseLayout {title}>
     <slot slot="head" name="head" />
-    <div id="pageContainer">
-        <NavigationBar logo={true} />
-        <div id="viewContainer">
-            <main id="content">
-                <slot />
-            </main>
-        </div>
-        <Footer />
-    </div>
+    <NavigationBar logo={true} />
+    <main id="content">
+        <slot />
+    </main>
+    <Footer />
 </BaseLayout>

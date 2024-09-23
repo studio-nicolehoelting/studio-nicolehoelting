@@ -2,3 +2,15 @@ $breakpoint-xs: 480px;
 $breakpoint-s: 768px;
 $breakpoint-m: 1024px;
 $breakpoint-l: 1280px;
+
+@property --logo-color {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #b59b7e;
+}
+
+@property --logo-text-color {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #88704e;
+}

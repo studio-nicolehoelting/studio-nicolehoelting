@@ -14,13 +14,17 @@ const { text = "Kleine Dinge\nmit grosser Liebe tun." } = Astro.props;
 
 <footer id="footer">
     <div class="footer-grid">
-        <Image
-            src={ifiLogo}
-            alt="Absolventin Institut für Innenarchitektur"
-            densities={[1.5, 2]}
-            quality="low"
+        <a
             class="ifi-logo"
-        />
+            href="https://institutfuerinnenarchitektur.de"
+            target="_blank"
+            ><Image
+                src={ifiLogo}
+                alt="Absolventin Institut für Innenarchitektur"
+                densities={[1.5, 2]}
+                quality="mid"
+            /></a
+        >
         <span class="text">{text}</span>
         <div class="links">
             <a href="/datenschutz" class="datenschutz">Datenschutz</a>
@@ -29,14 +33,17 @@ const { text = "Kleine Dinge\nmit grosser Liebe tun." } = Astro.props;
                     href="https://www.instagram.com/nicolehoelting_studio/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    ><Icon name="fa-brands:instagram-square" /></a
+                    ><Icon
+                        name="fa-brands:instagram-square"
+                        title="Instagram"
+                    /></a
                 >
                 <a
                     href="https://facebook.com/p/Studio-100086007337398"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <Icon name="fa-brands:facebook-square" />
+                    <Icon name="fa-brands:facebook-square" title="Facebook" />
                 </a>
             </div>
             <a href="/impressum" class="impressum">Impressum</a>
@@ -85,7 +92,12 @@ const { text = "Kleine Dinge\nmit grosser Liebe tun." } = Astro.props;
                 height: auto;
                 aspect-ratio: 1 / 1;
                 align-self: center;
-                overflow: hidden;
+
+                > img {
+                    width: 15em;
+                    height: 15em;
+                    object-fit: contain;
+                }
             }
             .ifi-logo {
                 grid-area: ifi-logo;

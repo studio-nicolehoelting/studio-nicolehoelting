@@ -57,6 +57,7 @@ const menu = [
         grid-template-rows: auto auto;
         grid-template-areas: "logo" "nav";
         align-items: center;
+        z-index: 10;
 
         @media (min-width: $breakpoint-s) {
             grid-template-columns: auto 1fr;
@@ -69,7 +70,6 @@ const menu = [
             display: flex;
             grid-area: nav;
 
-            background-color: var(--logo-color);
             flex-direction: column;
             flex-wrap: nowrap;
             justify-content: flex-start;
@@ -81,13 +81,11 @@ const menu = [
             overflow-y: auto;
             transform: translateX(100%);
             transition: transform 200ms ease-in-out;
-
-            @supports (background-color: color-mix(in srgb, var(--logo-color) 90%, black)) {
-                background-color: color-mix(in srgb, var(--logo-color) 90%, black);
-            }
+            background-color: var(--logo-color);
+            background-color: color-mix(in srgb, var(--logo-color) 90%, black);
 
             @supports (backdrop-filter: blur(1rem)) and (background-color: color-mix(in srgb, var(--logo-color) 80%, transparent)) {
-                background-color: color-mix(in srgb, var(--logo-color) 80%, transparent);
+                background-color: color-mix(in srgb, var(--logo-color) 70%, transparent);
                 backdrop-filter: blur(1rem);
             }
 
@@ -172,9 +170,9 @@ const menu = [
             top: 1.5rem;
             right: 1.5rem;
             z-index: 100;
-            border: 2px #e6e6e6 solid;
+            border: 2px black solid;
             display: block;
-            background-color: #444;
+            background-color: var(--logo-color);
             color: unset;
             padding: 0.25rem;
             border-radius: 20%;
@@ -182,7 +180,7 @@ const menu = [
             svg {
                 padding-top: 3px;
                 :global(*) {
-                    fill: #e6e6e6;
+                    fill: black;
                 }
             }
 

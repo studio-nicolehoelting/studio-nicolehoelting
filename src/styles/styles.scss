@@ -1,12 +1,6 @@
 @import "./variables.scss";
 @import "./fonts.scss";
 
-@property --logo-color {
-    syntax: "<color>";
-    inherits: false;
-    initial-value: #b59b7e;
-}
-
 * {
     margin: 0px;
     padding: 0px;
@@ -14,9 +8,4 @@
         Arial, sans-serif;
     font-weight: 300;
     box-sizing: border-box;
-}
-
-*::selection {
-    background-color: #777;
-    color: lightgray;
 }
