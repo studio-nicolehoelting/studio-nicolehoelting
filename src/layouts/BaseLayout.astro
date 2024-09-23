@@ -4,8 +4,6 @@ import { Head } from "astro-capo";
 import MatomoAnalytics from "@components/MatomoAnalytics.astro";
 import "@styles/styles.scss";
 
-// let manifest = pwaSetup.manifest || {};
-
 interface Props {
     title: string;
     transitionAnimate?: TransitionAnimationValue;
@@ -21,24 +19,32 @@ const { title, transitionAnimate, noTracking = false } = Astro.props;
         <meta charset="UTF-8" />
         <meta
             name="viewport"
-            content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
+            content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover"
         />
         <link rel="icon" type="image/ico" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+        />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
         <link rel="sitemap" href="/sitemap-index.xml" />
-        <meta name="theme-color" content="#666666" />
+        <meta name="theme-color" content="#b59b7e" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#b59b7e" />
         <meta name="application-name" content="Studio Nicole Hölting" />
-        {false && (<!-- 
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content={manifest.name} />
-        <meta name="description" content="Studio NH App" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="msapplication-config" content="/icons/browserconfig.xml" />
-        <meta name="msapplication-TileColor" content={manifest.theme_color} />
-        <meta name="msapplication-tap-highlight" content="no" /> -->)}
         <link
             rel="alternate"
             type="application/rss+xml"
@@ -53,4 +59,3 @@ const { title, transitionAnimate, noTracking = false } = Astro.props;
         <slot />
     </body>
 </html>
-

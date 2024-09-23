@@ -1,29 +1,26 @@
 ---
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
-import logoImg from "@images/logo.png";
+import Logo from "@components/Logo.astro";
 
 interface Props {
-    active?: string;
+    logo?: boolean | string;
 }
 
-const { active = "/" } = Astro.props;
+const { logo = true } = Astro.props;
 
 const menu = [
-    ["/", "Home"],
-    ["/living/", "Living"],
-    ["/projects/", "Projects"],
-    ["/artworks/", "Artworks"],
-    // ["/pricing/", "Pricing"],
-    ["/about/", "About"],
-    ["/contact/", "Contact"],
-    ["/blog/", "Blog"],
+    ["/projects/", "projects"],
+    ["/services/", "services"],
+    ["/about/", "about"],
+    ["/contact/", "contact"],
+    ["/blog/", "blog"],
 ];
 ---
 
 <nav class="navbar">
     <div class="logo-container">
-        <Image class="logo" src={logoImg} alt="Logo" quality="mid" />
+        <a href="/">{ typeof(logo) == "string" ? <span class="logo-text">{logo}</span> : (logo ? <Logo logoColor="var(--logo-color)" textColor="var(--logo-color)" /> : <></>) }</a>
     </div>
     <button class="mobile-nav-toggle" aria-label="Toggle navigation bar"
         ><Icon name="fa:bars" /></button
@@ -31,7 +28,7 @@ const menu = [
     <ul>
         {
             menu.map(([link, name]) => {
-                if (link === active) {
+                if (Astro.url.pathname.startsWith(link.replace(/\/$/, ""))) {
                     return (
                         <li class="element active">
                             <span>{name}</span>
@@ -52,54 +49,62 @@ const menu = [
     .navbar {
         box-sizing: border-box;
         padding-top: 0px;
-        background: #666;
         margin: 0px;
         padding: 0px;
-        // height: 100px;
         max-width: 100%;
         display: grid;
-        grid-template-columns: auto auto;
-        grid-template-rows: auto;
-        grid-template-areas: "logo nav";
-        // overflow-x: hidden;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "logo" "nav";
+        align-items: center;
 
-        @media (max-width: $mobile_max_width) {
-            grid-template-columns: auto;
-            grid-template-rows: auto auto;
-            grid-template-areas: "logo" "nav";
+        @media (min-width: $breakpoint-s) {
+            grid-template-columns: auto 1fr;
+            grid-template-rows: auto;
+            grid-template-areas: "logo nav";
         }
 
         ul {
             max-width: 100%;
-            padding: 10px 0px;
-            margin: 0px 5px;
-            padding-top: 25px;
             display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-            flex-wrap: wrap;
             grid-area: nav;
 
-            @media (max-width: $mobile_max_width) {
-                background-color: #555;
-                padding-top: 0;
-                flex-direction: column;
-                flex-wrap: nowrap;
-                justify-content: flex-start;
-                margin: 0;
-                position: fixed;
-                inset: 0 0 0 30%;
-                padding: 0 2em;
-                padding-top: min(20vh, 10rem);
-                z-index: 99;
-                overflow-y: auto;
-                transform: translateX(100%);
-                transition: transform 200ms ease-in-out;
+            background-color: var(--logo-color);
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            position: fixed;
+            inset: 0 0 0 30%;
+            padding: 0 2em;
+            padding-top: min(20vh, 10rem);
+            z-index: 99;
+            overflow-y: auto;
+            transform: translateX(100%);
+            transition: transform 200ms ease-in-out;
 
-                @supports (backdrop-filter: blur(1rem)) {
-                    background-color: #555555a0;
-                    backdrop-filter: blur(1rem);
-                }
+            @supports (background-color: color-mix(in srgb, var(--logo-color) 90%, black)) {
+                background-color: color-mix(in srgb, var(--logo-color) 90%, black);
+            }
+
+            @supports (backdrop-filter: blur(1rem)) and (background-color: color-mix(in srgb, var(--logo-color) 80%, transparent)) {
+                background-color: color-mix(in srgb, var(--logo-color) 80%, transparent);
+                backdrop-filter: blur(1rem);
+            }
+
+            @media (min-width: $breakpoint-s) {
+                margin-inline: 5px;
+                padding-top: 0;
+                background-color: transparent;
+                position: initial;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                inset: initial;
+                z-index: initial;
+                overflow-y: initial;
+                transform: initial;
+                transition: initial;
+                backdrop-filter: initial;
             }
 
             &.mobile-visible {
@@ -107,38 +112,38 @@ const menu = [
             }
 
             .element {
-                padding: 3px 10px;
+                padding: 5px;
+                margin-bottom: 0.5rem;
                 transition: all 100ms;
-                text-align: center;
                 font-size: 1.5rem;
-
-                @media (max-width: $mobile_max_width) {
-                    padding: 5px;
-                    margin-bottom: 0.5rem;
-                    background-color: #555;
+                text-align: center;
+                background-color: var(--logo-color);
+                
+                @media (min-width: $breakpoint-s) {
+                    padding: 3px 10px;
+                    margin-bottom: 0;
+                    background-color: transparent;
                 }
 
                 & > :is(a, span) {
-                    font-family: "Roboto thin", Calibri;
+                    display: block;
+                    width: 100%;
+                    border-bottom: 1px transparent solid;
 
-                    @media (max-width: $mobile_max_width) {
-                        display: block;
-                        width: 100%;
+                    @media (min-width: $breakpoint-s) {
+                        display: initial;
+                        width: initial;
                     }
                 }
 
                 &:hover > :is(a, span) {
                     text-decoration: none;
-                    color: white;
-                    border-bottom: 2px #fff solid;
+                    // color: white;
+                    border-bottom-color: black;
                 }
 
                 &.active span {
-                    // font-weight: bold;
-                    // margin: 0px;
-                    // padding: 0px;
-                    // color: white;
-                    border-bottom: 3px #fff solid;
+                    border-bottom: 2px black solid;
 
                     * {
                         cursor: pointer;
@@ -155,7 +160,7 @@ const menu = [
 
                 > span,
                 > a {
-                    color: white;
+                    color: black;
                 }
             }
         }
@@ -168,7 +173,7 @@ const menu = [
             right: 1.5rem;
             z-index: 100;
             border: 2px #e6e6e6 solid;
-            display: none;
+            display: block;
             background-color: #444;
             color: unset;
             padding: 0.25rem;
@@ -181,8 +186,8 @@ const menu = [
                 }
             }
 
-            @media (max-width: $mobile_max_width) {
-                display: block;
+            @media (min-width: $breakpoint-s) {
+                display: none;
             }
         }
 
@@ -191,14 +196,31 @@ const menu = [
             display: flex;
             justify-content: center;
             flex-direction: column;
+            height: 120px;
 
-            .logo {
-                width: 200px;
-                height: auto;
-                padding: 10px 15px;
+            @media (min-width: $breakpoint-s) {
+                margin-left: 1em;
+                height: 80px;
+            }
 
-                @media (max-width: $mobile_max_width) {
-                    margin: 10px auto;
+            > a {
+                height: 100%;
+                
+                :global(span.logo) {
+                    width: min(100%, 300px);
+                    height: 100%;
+                    padding: 10px 15px;
+                    margin-inline: auto;
+                    overflow-y: hidden;
+                    display: block;
+
+                    @media (min-width: $breakpoint-s) {
+                        margin: 0;
+                    }
+                }
+
+                .logo-text {
+                    max-width: min(100%, 300px);
                 }
             }
         }

@@ -45,8 +45,8 @@ const artworksCollection = defineCollection({
         }),
 });
 
-export const collections = {
-    projects: projectsCollection,
-    blog: blogCollection,
-    artworks: artworksCollection,
-};
+// export const collections = {
+//     projects: projectsCollection,
+//     blog: blogCollection,
+//     artworks: artworksCollection,
+// };

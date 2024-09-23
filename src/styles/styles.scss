@@ -1,23 +1,22 @@
 @import "./variables.scss";
 @import "./fonts.scss";
 
-:root {
-    --background-color: #b3b3b3;
-    --text-color: #4d4d4d;
+@property --logo-color {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #b59b7e;
 }
 
 * {
     margin: 0px;
     padding: 0px;
-    font-family: "Roboto Light", Calibri, Candara, Segoe, "Segoe UI", Optima,
+    font-family: "Caviar Dreams", Calibri, Candara, Segoe, "Segoe UI", Optima,
         Arial, sans-serif;
     font-weight: 300;
-    color: var(--text-color);
     box-sizing: border-box;
 }
 
 *::selection {
-    /* background-color: gray; */
     background-color: #777;
     color: lightgray;
 }

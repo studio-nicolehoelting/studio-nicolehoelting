@@ -1,0 +1,28 @@
+---
+import logoImg from "@images/logos/text.svg?raw";
+
+interface Props {
+    logoColor?: string;
+    textColor?: string;
+}
+
+let { logoColor = "#000", textColor = "#000" } = Astro.props;
+---
+
+<span
+    style={`--inline--logo-color: ${logoColor}; --inline--text-color: ${textColor}`}
+    class="logo"
+>
+    <Fragment set:html={logoImg} />
+</span>
+
+<style lang="scss">
+    .logo {
+        display: block;
+
+        > :global(svg) {
+            height: 100%;
+            width: 100%;
+        }
+    }
+</style>
