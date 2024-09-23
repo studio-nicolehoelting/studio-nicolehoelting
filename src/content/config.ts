@@ -1,25 +1,13 @@
 import { defineCollection, z } from "astro:content";
 
 const projectsCollection = defineCollection({
-    type: "data",
+    type: "content",
     schema: ({ image }) =>
         z.object({
+            thumbnail: image(),
+            titel: z.string(),
             position: z.number(),
-            einleitung: z.object({
-                text: z.string(),
-                bildtext: z.string().optional(),
-                primärfarbe: z.string(),
-                sekundärfarbe: z.string(),
-                bild: image(),
-            }),
-            slides: z
-                .array(
-                    z.object({
-                        text: z.string().optional(),
-                        bilder: z.array(image()),
-                    })
-                )
-                .optional(),
+            entwurf: z.boolean().optional(),
         }),
 });
 
@@ -45,8 +33,8 @@ const artworksCollection = defineCollection({
         }),
 });
 
-// export const collections = {
-//     projects: projectsCollection,
-//     blog: blogCollection,
-//     artworks: artworksCollection,
-// };
+export const collections = {
+    projects: projectsCollection,
+    blog: blogCollection,
+    artworks: artworksCollection,
+};

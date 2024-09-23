@@ -1,0 +1,23 @@
+---
+import BasicLayout from "@layouts/BasicLayout.astro";
+import type { GetStaticPaths } from "astro";
+import { getCollection, getEntryBySlug } from "astro:content";
+
+export const getStaticPaths = (async () => {
+    const projects = await getCollection("projects", ({ data }) => {
+        return import.meta.env.PROD ? data.entwurf !== true : true;
+    });
+    return projects.map((project) => ({
+        params: { slug: project.slug },
+    }));
+}) satisfies GetStaticPaths;
+
+const { slug } = Astro.params;
+
+const project = await getEntryBySlug("projects", slug);
+const { Content } = await project.render();
+---
+
+<BasicLayout title={`${project.data.titel} - Studio NH`}>
+    <Content />
+</BasicLayout>

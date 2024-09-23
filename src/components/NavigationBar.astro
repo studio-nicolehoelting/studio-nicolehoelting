@@ -28,7 +28,7 @@ const menu = [
     <ul>
         {
             menu.map(([link, name]) => {
-                if (Astro.url.pathname.startsWith(link.replace(/\/$/, ""))) {
+                if (Astro.url.pathname === link) {
                     return (
                         <li class="element active">
                             <span>{name}</span>
@@ -203,6 +203,7 @@ const menu = [
 
             > a {
                 height: 100%;
+                text-decoration: none;
                 
                 :global(span.logo) {
                     width: min(100%, 300px);
@@ -218,7 +219,22 @@ const menu = [
                 }
 
                 .logo-text {
+                    color: var(--logo-color);
+                    width: 100%;
+                    display: block;
                     max-width: min(100%, 300px);
+                    font-size: 2em;
+                    height: 100%;
+                    text-transform: uppercase;
+                    white-space: nowrap;
+                    align-content: center;
+                    margin-inline: 1cm;
+                    text-align: center;
+
+                    @media (min-width: $breakpoint-s) {
+                        margin-inline: 0;
+                        font-size: 3em;
+                    }
                 }
             }
         }

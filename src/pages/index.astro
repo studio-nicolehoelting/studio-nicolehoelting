@@ -71,6 +71,6 @@ import Swiper from "@components/home/Swiper.astro";
 <script>
     const skipButton = document.querySelector(".skip-button")!;
     skipButton.addEventListener("click", () => {
-        document.querySelector("#main").scrollIntoView({ behavior: "smooth" });
+        document.querySelector("#main")!.scrollIntoView({ behavior: "smooth" });
     });
 </script>

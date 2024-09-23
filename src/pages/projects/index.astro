@@ -1,0 +1,106 @@
+---
+import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+
+import BasicLayout from "../../layouts/BasicLayout.astro";
+
+const projects = await getCollection("projects", ({ data }) => {
+    return import.meta.env.PROD ? data.entwurf !== true : true;
+}).then((projects) =>
+    projects.sort((a, b) => a.data.position - b.data.position)
+);
+---
+
+<BasicLayout title="projects - Studio NH" logo="Nicole Hoelting">
+    <div class="projects-container">
+        <h1>projects</h1>
+        <div class="projects-grid">
+            {
+                projects.map((project) => (
+                    <a class="project" href={`./${project.slug}/`}>
+                        <Image
+                            src={project.data.thumbnail}
+                            alt={project.data.titel}
+                        />
+                        <h2>{project.data.titel}</h2>
+                    </a>
+                ))
+            }
+        </div>
+    </div>
+</BasicLayout>
+
+<style lang="scss">
+    .projects-container {
+        margin: 0.5em;
+
+        @media only screen and (min-width: $breakpoint-xs) {
+            margin: 2em;
+        }
+
+        @media only screen and (min-width: $breakpoint-l) {
+            margin-inline: auto;
+            max-width: 80em;
+        }
+
+        h1 {
+            margin-bottom: 0.5em;
+        }
+
+        .projects-grid {
+            display: grid;
+            gap: 0.5em;
+            grid-template-columns: auto;
+
+            @media only screen and (min-width: $breakpoint-s) {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1em;
+            }
+
+            @media only screen and (min-width: $breakpoint-l) {
+                gap: 3em;
+            }
+
+            .project {
+                padding: 1.5em;
+                padding-bottom: 1em;
+                background-color: var(--logo-color);
+                text-decoration: none;
+
+                transition: box-shadow 0.2s;
+
+                &:hover {
+                    box-shadow: 5px 5px 0.5em 0.125em rgba(0, 0, 0, 0.1);
+                }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    aspect-ratio: 1;
+                    object-fit: cover;
+
+                    // filter: grayscale(90%);
+                    // transition: filter 0.3s;
+                }
+
+                // &:hover img {
+                //     filter: none;
+                // }
+
+                h2 {
+                    color: black;
+                    text-align: center;
+                    margin-top: 0.25em;
+
+                    @media only screen and (min-width: $breakpoint-xs) and (max-width: $breakpoint-s) {
+                        font-size: 2em;
+                    }
+
+                    @media only screen and (min-width: $breakpoint-s) {
+                        font-size: 2.5em;
+                    }
+                }
+            }
+        }
+    }
+</style>
