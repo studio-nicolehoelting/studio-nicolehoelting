@@ -1,0 +1,184 @@
+---
+import { Image } from "astro:assets";
+
+import BasicLayout from "@layouts/BasicLayout.astro";
+import SkipButton from "@components/SkipButton.astro";
+
+import heroImg from "@images/contact/hero.jpg";
+
+// TODO: Rezensionen
+---
+
+<BasicLayout title="contact - Studio NH">
+    <div class="hero">
+        <Image
+            src={heroImg}
+            alt="Büroschild"
+            quality="max"
+            densities={[1.5, 2]}
+            class="hero-img"
+        />
+        <SkipButton />
+    </div>
+    <main id="main">
+        Ruf' mich gern an oder schreibe mir ein E-Mail: Ich freu' mich darauf,
+        dich kennenzulernen! Gemeinsam können wir deine Geschichte erzählen...
+
+        <form
+            id="contact-form"
+            action="https://form-relay.hoelting.dev/form/contact"
+        >
+            <h3>Coffee Talk</h3>
+
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">E-Mail</label>
+            <input type="email" id="email" name="email" required />
+
+            <span class="message">
+                <label for="message">Nachricht</label>
+                <textarea id="message" name="message" required></textarea>
+            </span>
+
+            <button type="submit">Absenden</button>
+        </form>
+
+        <section id="information">
+            <span class="name">Nicole Hoelting</span>
+            <span class="street"> Starenweg Zehn / 10 </span>
+            <span class="city"> Drei Drei Null Drei Vier/33034 Brakel </span>
+            <span class="email">
+                E-Mail: <a href="mailto:studio@nicolehoelting.de"
+                    >studio@nicolehoelting.de</a
+                >
+            </span>
+            <span class="tel">
+                Fon: <a href="tel:+4915253484096">+49 152 53484096</a>
+            </span>
+        </section>
+    </main>
+</BasicLayout>
+
+<style lang="scss">
+    .hero {
+        width: 100%;
+        height: 100%;
+
+        @media (min-width: $breakpoint-s) {
+            height: calc(100dvh - 80px);
+            z-index: -10;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    #main {
+        color: var(--logo-text-color);
+        font-size: 1.5em;
+        margin: 2em;
+        scroll-margin-top: 2em;
+
+        @media only screen and (min-width: $breakpoint-xs) {
+            font-size: 2em;
+        }
+
+        @media only screen and (min-width: $breakpoint-s) {
+            margin: 5em;
+            scroll-margin-top: 5em;
+        }
+    }
+
+    #contact-form {
+        margin-top: 2em;
+        display: grid;
+        gap: 0.5em 0.75em;
+        grid-template-columns: auto 1fr;
+
+        h3 {
+            grid-column: 1 / 3;
+            font-size: 1.5em;
+        }
+
+        label {
+            font-size: 0.75em;
+        }
+
+        input,
+        textarea {
+            padding: 0.5em;
+            border: 2px solid var(--logo-color);
+            border-radius: 0.5em;
+
+            &:focus {
+                outline: transparent;
+            }
+
+            &:focus-visible {
+                outline: auto;
+            }
+        }
+
+        textarea {
+            resize: vertical;
+            height: 10em;
+        }
+
+        .message {
+            display: flex;
+            flex-direction: column;
+            grid-column: 1 / 3;
+            gap: 0.25em;
+        }
+
+        button {
+            padding: 0.5em;
+            border: 2px solid var(--logo-color);
+            border-radius: 0.5em;
+            background-color: var(--logo-color);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition:
+                background-color 0.2s,
+                color 0.2s;
+            grid-column: 1 / 3;
+
+            &:hover {
+                background-color: var(--logo-text-color);
+                color: var(--logo-color);
+            }
+        }
+    }
+
+    #information {
+        display: flex;
+        flex-direction: column;
+
+        margin-top: 2em;
+
+        a {
+            text-decoration: none;
+            color: inherit;
+
+            &:hover {
+                color: var(--logo-color);
+                text-decoration: underline;
+            }
+        }
+    }
+</style>
+
+<script>
+    const url = new URL(window.location.href);
+    const success = url.searchParams.get("success") == "true";
+    if (success) {
+        alert("Vielen Dank für deine Nachricht! Ich melde mich bei dir.");
+    }
+    url.searchParams.delete("success");
+    window.history.replaceState({}, "", url);
+</script>

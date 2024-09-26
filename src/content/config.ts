@@ -18,8 +18,9 @@ const blogCollection = defineCollection({
             ankündigung: z.boolean().optional(),
             titel: z.string(),
             untertitel: z.string().optional(),
-            bild: image().optional(),
+            bild: image(),
             datum: z.date(),
+            entwurf: z.boolean().optional(),
         }),
 });
 
