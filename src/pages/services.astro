@@ -2,16 +2,17 @@
 import { Image } from "astro:assets";
 
 import BasicLayout from "@layouts/BasicLayout.astro";
+import SkipButton from "@components/SkipButton.astro";
+import Details from "@components/Details.astro";
 
 import heroImg from "@images/services/hero.jpg";
-import SkipButton from "@components/SkipButton.astro";
 ---
 
 <BasicLayout title="services - Studio NH">
     <div class="hero">
         <Image
             src={heroImg}
-            alt="Moderner Stuhl vor Industriehintergrund"
+            alt="Ich vor grauer Wand"
             quality="max"
             densities={[1.5, 2]}
             class="hero-img"
@@ -27,122 +28,107 @@ import SkipButton from "@components/SkipButton.astro";
         persönliche, vertrauensvolle Zusammenarbeit - individuell, innovativ und
         irgendwie anders.
 
-        <details>
-            <summary>PROCESS</summary>
-            <div class="content">
-                <p>
-                    Neubau. Umbau. Renovierung. <br />
-                    <br />
-                    Du planst, dir und deiner Familie ein eigenes Haus zu bauen oder
-                    eine Bestandsimmobilie deinen Bedürfnissen und Wünschen anzupassen?
-                    Vielleicht fühlst du dich aber auch in deinen jetzigen vier Wänden
-                    nicht wirklich wohl, weißt allerdings nicht, woran es liegen
-                    könnte? Vielleicht hast du ein konkretes Projekt vor Augen, möchtest
-                    möglicherweise dein Bad modernisieren, den Wohnbereich renovieren,
-                    das Schlafzimmer gemütlicher gestalten? Doch die Inspirationen
-                    auf Social Media oder die Auswahl in Baumärkten & Showrooms erschlagen
-                    dich? Vielleicht fehlt dir auch die Zeit für Besuche vor Ort
-                    und der Recherche im Netz?
-                </p>
+        <Details summary="PROCESS">
+            <p>
+                Neubau. Umbau. Renovierung. <br />
+                <br />
+                Du planst, dir und deiner Familie ein eigenes Haus zu bauen oder
+                eine Bestandsimmobilie deinen Bedürfnissen und Wünschen anzupassen?
+                Vielleicht fühlst du dich aber auch in deinen jetzigen vier Wänden
+                nicht wirklich wohl, weißt allerdings nicht, woran es liegen könnte?
+                Vielleicht hast du ein konkretes Projekt vor Augen, möchtest möglicherweise
+                dein Bad modernisieren, den Wohnbereich renovieren, das Schlafzimmer
+                gemütlicher gestalten? Doch die Inspirationen auf Social Media oder
+                die Auswahl in Baumärkten & Showrooms erschlagen dich? Vielleicht
+                fehlt dir auch die Zeit für Besuche vor Ort und der Recherche im
+                Netz?
+            </p>
 
-                <p>
-                    Meine Entwürfe entstehen in einem offenen und kreativen
-                    Entwicklungsprozess. So bitte ich dich vor einem ersten
-                    Treffen, dich dem Projekt anhand eines Fragebogens,
-                    gedanklich zu nähern, dir über Vorlieben oder auch No-Gos im
-                    Klaren zu werden und mir diese, gemeinsam mit Fotos und
-                    einem Grundriss - falls vorhanden - zukommen zu lassen. Für
-                    die Zusammenarbeit schafft dies in der Regel eine sehr gute
-                    Basis: Hast du dich schon einmal gefragt, wie viel Licht du
-                    brauchst? Fühlst du dich in großen, hellen Räumen mit viel
-                    Platz für Ideen & Gedanken wohl oder bevorzugst du kleine
-                    Zimmer mit noch kleineren Fenstern, die dir ein
-                    beschützendes und sicheres Nest sind? Bei welcher Farbe
-                    kannst du entspannen, bei welcher konzentriert arbeiten? Ich
-                    möchte dich ermutigen, über dich und dein Wohnumfeld
-                    nachzudenken, denn nicht in jedem Haus sind wir der gleiche
-                    Mensch. Unseren gemeinsamen Ortstermin betrachte ich als
-                    Geschenk. Ich darf einen Raumeindruck deines Zuhauses
-                    erlangen und zuhören. Ich lausche deiner ganz persönlichen
-                    Geschichte, die eurer Familie. Nur so entstehen Ideen. Nur
-                    so finde ich inspirierende Lösungen, die dir einen
-                    nachhaltigen Nutzen und Freude bringen. Nur so erfahre ich,
-                    was dich ausmacht, was dir gefällt und guttut. Mein Ziel ist
-                    es, dein Wohnumfeld zu verbessern, Alltagsabläufe neu zu
-                    strukturieren, zu organisieren, zu optimieren und so dein
-                    Leben entspannter, leichter und einfach schöner zu machen.
-                    Innenarchitektur beinhaltet unzählige Aspekte. Sie ist nicht
-                    zwangsläufig teuer. Und nicht zwangsläufig muss alles neu
-                    gekauft werden. Schnell kann ich den Fokus auf etwas legen,
-                    das dich bereichert – auf interessante Einrichtungsstücke,
-                    erhaltenswerte Materialien oder auf persönliche Charaktere,
-                    die unbedingt im Wohnumfeld Ausdruck finden sollten. Ich
-                    schaffe ein Gleichgewicht zwischen alten Lieblingsstücken &
-                    modernen Trends. Und tatsächlich braucht es manchmal
-                    lediglich einen Eimer Farbe, ein Wochenende Zeit, etwas
-                    Möbelrücken, eine neue Beleuchtung und ein paar besondere
-                    Kissen, um eine völlig andere Raumwirkung zu erzielen. Ich
-                    verspreche, für deine Designwünsche und dein vorgegebenes,
-                    finanzielles Budget einzigartige und individuelle Lösungen
-                    zu finden. Innenräume mit Identität & Charakter.
-                </p>
-            </div>
-        </details>
+            <p>
+                Meine Entwürfe entstehen in einem offenen und kreativen
+                Entwicklungsprozess. So bitte ich dich vor einem ersten Treffen,
+                dich dem Projekt anhand eines Fragebogens, gedanklich zu nähern,
+                dir über Vorlieben oder auch No-Gos im Klaren zu werden und mir
+                diese, gemeinsam mit Fotos und einem Grundriss - falls vorhanden
+                - zukommen zu lassen. Für die Zusammenarbeit schafft dies in der
+                Regel eine sehr gute Basis: Hast du dich schon einmal gefragt,
+                wie viel Licht du brauchst? Fühlst du dich in großen, hellen
+                Räumen mit viel Platz für Ideen & Gedanken wohl oder bevorzugst
+                du kleine Zimmer mit noch kleineren Fenstern, die dir ein
+                beschützendes und sicheres Nest sind? Bei welcher Farbe kannst
+                du entspannen, bei welcher konzentriert arbeiten? Ich möchte
+                dich ermutigen, über dich und dein Wohnumfeld nachzudenken, denn
+                nicht in jedem Haus sind wir der gleiche Mensch. Unseren
+                gemeinsamen Ortstermin betrachte ich als Geschenk. Ich darf
+                einen Raumeindruck deines Zuhauses erlangen und zuhören. Ich
+                lausche deiner ganz persönlichen Geschichte, die eurer Familie.
+                Nur so entstehen Ideen. Nur so finde ich inspirierende Lösungen,
+                die dir einen nachhaltigen Nutzen und Freude bringen. Nur so
+                erfahre ich, was dich ausmacht, was dir gefällt und guttut. Mein
+                Ziel ist es, dein Wohnumfeld zu verbessern, Alltagsabläufe neu
+                zu strukturieren, zu organisieren, zu optimieren und so dein
+                Leben entspannter, leichter und einfach schöner zu machen.
+                Innenarchitektur beinhaltet unzählige Aspekte. Sie ist nicht
+                zwangsläufig teuer. Und nicht zwangsläufig muss alles neu
+                gekauft werden. Schnell kann ich den Fokus auf etwas legen, das
+                dich bereichert – auf interessante Einrichtungsstücke,
+                erhaltenswerte Materialien oder auf persönliche Charaktere, die
+                unbedingt im Wohnumfeld Ausdruck finden sollten. Ich schaffe ein
+                Gleichgewicht zwischen alten Lieblingsstücken & modernen Trends.
+                Und tatsächlich braucht es manchmal lediglich einen Eimer Farbe,
+                ein Wochenende Zeit, etwas Möbelrücken, eine neue Beleuchtung
+                und ein paar besondere Kissen, um eine völlig andere Raumwirkung
+                zu erzielen. Ich verspreche, für deine Designwünsche und dein
+                vorgegebenes, finanzielles Budget einzigartige und individuelle
+                Lösungen zu finden. Innenräume mit Identität & Charakter.
+            </p>
+        </Details>
 
-        <details>
-            <summary>BOXES</summary>
-            <div class="content">
-                <p>
-                    Mein Leistungsportfolio reicht vom Versenden einer einfachen
-                    Online-Shopping-Liste einzelner Möbel- oder
-                    Einrichtungsstücke, über das Zusammenstellen einer
-                    Inspirationsbox, über die Einkaufsbegleitung in Baumärkten,
-                    Badwelten, Küchenstudios, Möbelhäusern &
-                    Einrichtungslädchen, bis hin zur konkreten Entwurfsplanung
-                    und Realisierung. Je nach Absprache erhältst du dazu von mir
-                    zum Beispiel eine liebevoll gepackte Kiste voller
-                    Gestaltungsideen: Ein Farbkonzept nebst Zeichnungen &
-                    Visualisierung, Moodboard, Material- und Musterproben.
-                    Entspannt kannst du alles zu Hause auspacken, bei
-                    verschiedenen Lichtverhältnissen auf dich wirken lassen, dir
-                    die Ideen immer wieder ins Gedächtnis rufen und natürlich
-                    auch umsetzen. In welchem Umfang du dir dabei meine
-                    professionelle Unterstützung wünschst, entscheidest du. Gut
-                    für dich: Ich bin an keinen Lieferanten oder Produzenten
-                    gebunden. Ich wähle frei aus allen und allem, ausschließlich
-                    in deinem Interesse. Um wirklich kreativ sein zu können,
-                    arbeite ich mit verschiedenen Dienstleistern & Handwerkern
-                    vor Ort zusammen, bespreche mit ihnen die Umsetzbarkeit
-                    meiner Ideen und Projekte. Und wenn ein besonderer Vorhang,
-                    ein Raumteiler oder ein individuelles Möbelstück benötigt
-                    werden, mache ich hierfür gern eigene Entwürfe, die
-                    anschließend speziell angefertigt werden. Für diese und
-                    natürlich auch alle anderen anfallenden Arbeiten kooperiere
-                    ich mit zuverlässigen Partnern, die ich lange schon kenne.
-                    Ich liebe es aber auch, neue Kontakte zu knüpfen, kleine
-                    Unternehmen & Lädchen zu finden und zu schauen: "Hej, ihr
-                    verkauft Einrichtungsgegenstände - wie schön! Wie können wir
-                    zusammenarbeiten?" Und du profitierst davon und freust dich
-                    am Ende über das tolle Ergebnis!
-                </p>
-            </div>
-        </details>
+        <Details summary="BOXES">
+            <p>
+                Mein Leistungsportfolio reicht vom Versenden einer einfachen
+                Online-Shopping-Liste einzelner Möbel- oder Einrichtungsstücke,
+                über das Zusammenstellen einer Inspirationsbox, über die
+                Einkaufsbegleitung in Baumärkten, Badwelten, Küchenstudios,
+                Möbelhäusern & Einrichtungslädchen, bis hin zur konkreten
+                Entwurfsplanung und Realisierung. Je nach Absprache erhältst du
+                dazu von mir zum Beispiel eine liebevoll gepackte Kiste voller
+                Gestaltungsideen: Ein Farbkonzept nebst Zeichnungen &
+                Visualisierung, Moodboard, Material- und Musterproben. Entspannt
+                kannst du alles zu Hause auspacken, bei verschiedenen
+                Lichtverhältnissen auf dich wirken lassen, dir die Ideen immer
+                wieder ins Gedächtnis rufen und natürlich auch umsetzen. In
+                welchem Umfang du dir dabei meine professionelle Unterstützung
+                wünschst, entscheidest du. Gut für dich: Ich bin an keinen
+                Lieferanten oder Produzenten gebunden. Ich wähle frei aus allen
+                und allem, ausschließlich in deinem Interesse. Um wirklich
+                kreativ sein zu können, arbeite ich mit verschiedenen
+                Dienstleistern & Handwerkern vor Ort zusammen, bespreche mit
+                ihnen die Umsetzbarkeit meiner Ideen und Projekte. Und wenn ein
+                besonderer Vorhang, ein Raumteiler oder ein individuelles
+                Möbelstück benötigt werden, mache ich hierfür gern eigene
+                Entwürfe, die anschließend speziell angefertigt werden. Für
+                diese und natürlich auch alle anderen anfallenden Arbeiten
+                kooperiere ich mit zuverlässigen Partnern, die ich lange schon
+                kenne. Ich liebe es aber auch, neue Kontakte zu knüpfen, kleine
+                Unternehmen & Lädchen zu finden und zu schauen: "Hej, ihr
+                verkauft Einrichtungsgegenstände - wie schön! Wie können wir
+                zusammenarbeiten?" Und du profitierst davon und freust dich am
+                Ende über das tolle Ergebnis!
+            </p>
+        </Details>
 
-        <details>
-            <summary>PRICES</summary>
-            <div class="content">
-                <p>
-                    Für unsere gemeinsame Arbeit ist mir Kostentransparenz &
-                    Planungssicherheit ganz besonders wichtig. Deshalb biete ich
-                    meine Dienstleistungen auf Basis der zu gestaltenden
-                    Wohnfläche an. Der Preis richtet sich nach dem Umfang der
-                    gewünschten Unterstützung und ist - zum Beispiel bei der
-                    Auswahl nur eines einzigen, neuen Möbelstücks - bereits für
-                    einen Quadratmeter buchbar. Grundlage ist stets ein
-                    Dienstvertrag.
-                </p>
-            </div>
-        </details>
+        <Details summary="PRICES">
+            <p>
+                Für unsere gemeinsame Arbeit ist mir Kostentransparenz &
+                Planungssicherheit ganz besonders wichtig. Deshalb biete ich
+                meine Dienstleistungen auf Basis der zu gestaltenden Wohnfläche
+                an. Der Preis richtet sich nach dem Umfang der gewünschten
+                Unterstützung und ist - zum Beispiel bei der Auswahl nur eines
+                einzigen, neuen Möbelstücks - bereits für einen Quadratmeter
+                buchbar. Grundlage ist stets ein Dienstvertrag.
+            </p>
+        </Details>
     </main>
 </BasicLayout>
 
@@ -176,51 +162,6 @@ import SkipButton from "@components/SkipButton.astro";
         @media only screen and (min-width: $breakpoint-s) {
             margin: 5em;
             scroll-margin-top: 5em;
-        }
-
-        details {
-            cursor: pointer;
-            margin-top: 1em;
-
-            @media only screen and (min-width: $breakpoint-m) {
-                margin-left: 5em;
-            }
-
-            summary {
-                user-select: none;
-
-                @media only screen and (min-width: $breakpoint-m) {
-                    margin-left: -1em;
-                }
-
-                &::marker {
-                    margin-right: 0;
-                }
-
-                &:hover {
-                    color: var(--logo-color);
-                }
-            }
-
-            > .content {
-                margin-top: 0.5em;
-
-                @media only screen and (min-width: $breakpoint-m) {
-                    padding-left: 0.5em;
-                    position: relative;
-
-                    &::after {
-                        content: "";
-                        background-color: var(--logo-text-color);
-                        position: absolute;
-                        width: 5px;
-                        left: 0;
-                        top: -0.25em;
-                        bottom: 0;
-                        z-index: -1;
-                    }
-                }
-            }
         }
     }
 </style>

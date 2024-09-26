@@ -1,0 +1,63 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+type Props = {
+    summary: string;
+} & HTMLAttributes<"details">;
+
+const { summary, ...args } = Astro.props;
+---
+
+<details {...args}>
+    <summary>{summary}</summary>
+    <div class="content">
+        <slot />
+    </div>
+</details>
+
+<style lang="scss">
+    details {
+        cursor: pointer;
+        margin-top: 1em;
+
+        @media only screen and (min-width: $breakpoint-m) {
+            margin-left: 5em;
+        }
+
+        summary {
+            user-select: none;
+
+            @media only screen and (min-width: $breakpoint-m) {
+                margin-left: -1em;
+            }
+
+            &::marker {
+                margin-right: 0;
+            }
+
+            &:hover {
+                color: var(--logo-color);
+            }
+        }
+
+        > .content {
+            margin-top: 0.5em;
+
+            @media only screen and (min-width: $breakpoint-m) {
+                padding-left: 0.5em;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    background-color: var(--logo-text-color);
+                    position: absolute;
+                    width: 5px;
+                    left: 0;
+                    top: -0.25em;
+                    bottom: 0;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+</style>
