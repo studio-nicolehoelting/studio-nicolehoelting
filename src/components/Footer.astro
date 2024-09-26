@@ -77,8 +77,8 @@ const { text = "Kleine Dinge\nmit grosser Liebe tun." } = Astro.props;
                 grid-template-columns: repeat(2, 1fr);
                 grid-template-rows: repeat(3, auto);
                 grid-template-areas:
-                    "ifi-logo text"
                     "logo logo"
+                    "ifi-logo text"
                     "links links";
             }
 
@@ -125,6 +125,8 @@ const { text = "Kleine Dinge\nmit grosser Liebe tun." } = Astro.props;
             .logo {
                 grid-area: logo;
                 max-width: 15em;
+                height: 100%;
+                width: 100%;
             }
             .links {
                 grid-area: links;
