@@ -1,17 +1,29 @@
 ---
+import type { HTMLAttributes } from "astro/types";
+
 import logoImg from "@images/logos/text.svg?raw";
 
-interface Props {
+interface LogoProps {
     logoColor?: string;
     textColor?: string;
 }
 
-let { logoColor = "#000", textColor = "#000" } = Astro.props;
+type Props = LogoProps & HTMLAttributes<"span">;
+
+const {
+    logoColor = "#000",
+    textColor = "#000",
+    class: className,
+    ...attrs
+} = Astro.props;
+
+const logoClasses = [...new Set(["logo", className])];
 ---
 
 <span
     style={`--inline--logo-color: ${logoColor}; --inline--text-color: ${textColor}`}
-    class="logo"
+    {...attrs}
+    class:list={logoClasses}
 >
     <Fragment set:html={logoImg} />
 </span>

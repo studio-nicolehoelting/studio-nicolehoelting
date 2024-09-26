@@ -1,18 +1,21 @@
 ---
-import { Image } from "astro:assets";
-import { Icon } from "astro-icon/components";
 import BasicLayout from "@layouts/BasicLayout.astro";
 import Swiper from "@components/home/Swiper.astro";
+import SkipButton from "@components/SkipButton.astro";
+import Logo from "@components/Logo.astro";
 ---
 
 <BasicLayout title="Studio Nicole Hölting">
     <div class="hero">
         <Swiper />
-        <button class="skip-button" aria-label="Zum Inhalt springen"
-            ><Icon name="fa:chevron-down" title="Zum Inhalt springen" /></button
-        >
+        <SkipButton />
+        <Logo
+            class="logo"
+            textColor="var(--logo-color)"
+            logoColor="var(--logo-color)"
+        />
     </div>
-    <article id="main">
+    <main id="main">
         Ein Raum ist sehr viel mehr als oben & unten und immer an der Wand lang.
         Räume haben eine Seele. Sie schenken uns ein Zuhause. Für dich möchte
         ich sie so gestalten, dass du dich in ihnen ganz besonders wohlfühlst!
@@ -22,41 +25,30 @@ import Swiper from "@components/home/Swiper.astro";
         erschaffen, in denen du dich Tag für Tag gern aufhältst, in denen du es
         geniesst, zu leben, zu lieben & zu lachen, in denen du glücklich bist.
         Meine Passion. Mein Anspruch. Einrichten mit Liebe.
-    </article>
+    </main>
 </BasicLayout>
 
 <style lang="scss">
     .hero {
         position: relative;
 
-        .skip-button {
-            display: none;
-
-            @media only screen and (min-width: $breakpoint-s) {
-                display: block;
-                position: absolute;
-                bottom: 1em;
-                left: 50%;
-                transform: translateX(-50%);
-                z-index: 10;
-                cursor: pointer;
-                background: none;
-                border: none;
-
-                svg {
-                    height: 4em;
-                    width: 4em;
-                    color: var(--logo-color);
-                    filter: drop-shadow(0 0 0.5em black);
-                }
-            }
+        .logo {
+            height: 15em;
+            width: 45em;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 5;
+            transform: translateX(-50%) translateY(-50%);
+            filter: drop-shadow(0 0 1em black);
         }
     }
 
     #main {
-        color: #88704e;
+        color: var(--logo-text-color);
         font-size: 1.5em;
         margin: 2em;
+        scroll-margin-top: 2em;
 
         @media only screen and (min-width: $breakpoint-xs) {
             font-size: 2em;
@@ -64,13 +56,7 @@ import Swiper from "@components/home/Swiper.astro";
 
         @media only screen and (min-width: $breakpoint-s) {
             margin: 5em;
+            scroll-margin-top: 5em;
         }
     }
 </style>
-
-<script>
-    const skipButton = document.querySelector(".skip-button")!;
-    skipButton.addEventListener("click", () => {
-        document.querySelector("#main")!.scrollIntoView({ behavior: "smooth" });
-    });
-</script>

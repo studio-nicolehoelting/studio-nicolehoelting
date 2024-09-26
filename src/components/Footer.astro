@@ -4,6 +4,7 @@ import { Image } from "astro:assets";
 
 import ifiLogo from "@images/logos/ifi.jpg";
 import qrCode from "@images/qr-code.svg";
+import Logo from "./Logo.astro";
 
 interface Props {
     text?: string;
@@ -14,6 +15,7 @@ const { text = "Kleine Dinge\nmit grosser Liebe tun." } = Astro.props;
 
 <footer id="footer">
     <div class="footer-grid">
+        <Logo logoColor="white" textColor="white" class="logo" />
         <a
             class="ifi-logo"
             href="https://www.institutfuerinnenarchitektur.de"
@@ -62,6 +64,7 @@ const { text = "Kleine Dinge\nmit grosser Liebe tun." } = Astro.props;
             display: grid;
             grid-template-columns: auto;
             grid-template-areas:
+                "logo"
                 "text"
                 "links"
                 "ifi-logo";
@@ -71,30 +74,32 @@ const { text = "Kleine Dinge\nmit grosser Liebe tun." } = Astro.props;
             max-width: 100%;
 
             @media only screen and (min-width: $breakpoint-xs) and (max-width: $breakpoint-s) {
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: auto auto;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, auto);
                 grid-template-areas:
                     "ifi-logo text"
+                    "logo logo"
                     "links links";
             }
 
             @media only screen and (min-width: $breakpoint-s) {
                 grid-template-columns: 1fr 2fr 1fr;
-                grid-template-rows: auto auto;
+                grid-template-rows: repeat(3, auto);
                 grid-template-areas:
+                    "ifi-logo logo qr-code"
                     "ifi-logo text qr-code"
                     "ifi-logo links qr-code";
             }
 
             .ifi-logo,
             .qr-code {
-                max-width: 15em;
+                max-width: min(15em, 100%);
                 height: auto;
                 aspect-ratio: 1 / 1;
                 align-self: center;
 
                 > img {
-                    width: 15em;
+                    width: min(15em, 100%);
                     height: 15em;
                     object-fit: contain;
                 }
@@ -116,6 +121,10 @@ const { text = "Kleine Dinge\nmit grosser Liebe tun." } = Astro.props;
                 padding: 1em;
                 font-size: 2em;
                 text-align: center;
+            }
+            .logo {
+                grid-area: logo;
+                max-width: 15em;
             }
             .links {
                 grid-area: links;

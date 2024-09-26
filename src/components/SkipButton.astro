@@ -1,0 +1,40 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+    target?: string;
+}
+
+const { target = "#main" } = Astro.props;
+---
+
+<button
+    aria-label="Zum Inhalt springen"
+    onclick={`document.querySelector('${target}').scrollIntoView({ behavior: 'smooth' });`}
+    ><Icon name="fa:chevron-down" title="Zum Inhalt springen" /></button
+>
+
+<style lang="scss">
+    button {
+        display: none;
+
+        @media only screen and (min-width: $breakpoint-s) {
+            display: block;
+            position: absolute;
+            bottom: 1em;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            cursor: pointer;
+            background: none;
+            border: none;
+
+            svg {
+                height: 4em;
+                width: 4em;
+                color: var(--logo-color);
+                filter: drop-shadow(0 0 0.5em black);
+            }
+        }
+    }
+</style>

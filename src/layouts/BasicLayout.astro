@@ -5,17 +5,17 @@ import Footer from "@components/Footer.astro";
 
 interface Props {
     title: string;
-    logo?: boolean | string;
+    footerText?: string;
 }
 
-const { title, logo } = Astro.props;
+const { title, footerText } = Astro.props;
 ---
 
 <BaseLayout {title}>
     <slot slot="head" name="head" />
-    <NavigationBar {logo} />
-    <main id="content">
+    <NavigationBar />
+    <div id="content">
         <slot />
-    </main>
-    <Footer />
+    </div>
+    <Footer text={footerText} />
 </BaseLayout>
