@@ -19,6 +19,7 @@ const projects = await getCollection("projects", ({ data }) => {
                     <Image
                         src={project.data.thumbnail}
                         alt={project.data.titel}
+                        quality={"mid"}
                     />
                     <h2>{project.data.titel}</h2>
                 </a>

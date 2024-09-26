@@ -1,7 +1,10 @@
 ---
-import BasicLayout from "@layouts/BasicLayout.astro";
 import type { GetStaticPaths } from "astro";
-import { getCollection, getEntryBySlug } from "astro:content";
+import { Schema } from "astro-seo-schema";
+import { getCollection, getEntry } from "astro:content";
+import { getImage } from "astro:assets";
+
+import BasicLayout from "@layouts/BasicLayout.astro";
 
 export const getStaticPaths = (async () => {
     const projects = await getCollection("projects", ({ data }) => {
@@ -14,10 +17,34 @@ export const getStaticPaths = (async () => {
 
 const { slug } = Astro.params;
 
-const project = await getEntryBySlug("projects", slug);
+const project = await getEntry("projects", slug);
 const { Content } = await project.render();
+
+const thumbnailPath = (
+    await getImage({
+        src: project.data.thumbnail,
+        inferSize: true,
+        quality: "mid",
+    })
+).src;
 ---
 
 <BasicLayout title={`${project.data.titel} - Studio NH`}>
+    <Schema
+        slot="head"
+        item={{
+            "@context": "https://schema.org",
+            "@type": "CreativeWork",
+            name: project.data.titel,
+            image: Astro.site!.origin + thumbnailPath,
+            url: `${Astro.site!.origin}projects/${slug}/`,
+            author: {
+                "@type": "Person",
+                name: "Nicole Hölting",
+                url: Astro.site!.origin,
+            },
+            keywords: "Innenarchitektur, Design, Projekte, Interior Design",
+        }}
+    />
     <Content />
 </BasicLayout>

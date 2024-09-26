@@ -130,16 +130,15 @@ const menu = [
                     width: 100%;
                     border-bottom: 1px transparent solid;
 
+                    &:hover {
+                        text-decoration: none;
+                        border-bottom-color: black;
+                    }
+
                     @media (min-width: $breakpoint-s) {
                         display: initial;
                         width: initial;
                     }
-                }
-
-                &:hover > :is(a, span) {
-                    text-decoration: none;
-                    // color: white;
-                    border-bottom-color: black;
                 }
 
                 &.active span {
