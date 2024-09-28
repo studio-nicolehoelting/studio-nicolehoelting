@@ -21,10 +21,9 @@ Garten ein, es liefert darüberhinaus Funktionen, die der Familie völlig neue M
 Schmökern im Hängesessel, sogar bei Regen. Glühweintrinken im Schnee. Tomaten züchten im Sommer...
 Immer hübsch anzusehen!
 
-![Vorher](../../images/projects/gewächshaus/schuppen.jpg)
-
 ![Aussen](../../images/projects/gewächshaus/aussen.jpg)
 
+![Vorher](../../images/projects/gewächshaus/schuppen.jpg)
 ![Hängesessel](../../images/projects/gewächshaus/haengesessel.jpg)
 
 ![Bufflon](../../images/projects/gewächshaus/bufflon.jpg)

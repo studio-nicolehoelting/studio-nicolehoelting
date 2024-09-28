@@ -19,7 +19,6 @@ dem Pizzastein. Besonders abends wird es am großen Teak-Esstisch nebenan gemüt
 Solar-Lichterkette kann man bis spät in die Nacht hinein Karten spielen...
 
 ![Vorher](../../images/projects/outdoorkueche/kletterhaus.jpg)
-
 ![Grill](../../images/projects/outdoorkueche/grill.jpg)
 
 ![Küchenblock](../../images/projects/outdoorkueche/kuechenblock.jpg)

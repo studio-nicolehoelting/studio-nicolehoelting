@@ -23,7 +23,6 @@ Urlaub im eigenen Zuhause!
 ![Blumenecke](../../images/projects/sauna/blumenecke-q.jpg)
 
 ![CD Player](../../images/projects/sauna/cd-player-mit-gruen-2-5.jpg)
-
 ![Wandhaken](../../images/projects/sauna/Wandhaken-2-5.jpg)
 
 ![Sessel](../../images/projects/sauna/sessel-mit-bildern-q.jpg)

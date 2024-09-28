@@ -4,7 +4,7 @@ import { Schema } from "astro-seo-schema";
 import { getCollection, getEntry } from "astro:content";
 import { getImage } from "astro:assets";
 
-import BasicLayout from "@layouts/BasicLayout.astro";
+import EntryLayout from "@layouts/EntryLayout.astro";
 
 export const getStaticPaths = (async () => {
     const blogs = await getCollection("blog", ({ data }) => {
@@ -20,31 +20,32 @@ const { slug } = Astro.params;
 const blog = await getEntry("blog", slug);
 const { Content } = await blog.render();
 
-// const thumbnailPath = (
-//     await getImage({
-//         src: blog.data.thumbnail,
-//         inferSize: true,
-//         quality: "mid",
-//     })
-// ).src;
+const thumbnailPath = (
+    await getImage({
+        src: blog.data.bild,
+        inferSize: true,
+        quality: "mid",
+    })
+).src;
 ---
 
-<BasicLayout title={`${blog.data.titel} - Studio NH`}>
-    <!-- <Schema
+<EntryLayout title={`${blog.data.titel} - Studio NH`}>
+    <Schema
         slot="head"
         item={{
             "@context": "https://schema.org",
-            "@type": "CreativeWork",
+            "@type": "BlogPosting",
             name: blog.data.titel,
             image: Astro.site!.origin + thumbnailPath,
-            url: `${Astro.site!.origin}projects/${slug}/`,
+            url: `${Astro.site!.origin}blog/${slug}/`,
             author: {
                 "@type": "Person",
                 name: "Nicole Hölting",
                 url: Astro.site!.origin,
             },
-            keywords: "Innenarchitektur, Design, Projekte, Interior Design",
+            keywords: "Innenarchitektur, Design, Interior Design",
         }}
-    /> -->
+    />
+    <h1>{blog.data.titel}</h1>
     <Content />
-</BasicLayout>
+</EntryLayout>

@@ -5,8 +5,7 @@ import BasicLayout from "@layouts/BasicLayout.astro";
 import SkipButton from "@components/SkipButton.astro";
 
 import heroImg from "@images/contact/hero.jpg";
-
-// TODO: Rezensionen
+import ReviewsSwiper from "@components/contact/ReviewsSwiper.astro";
 ---
 
 <BasicLayout title="contact - Studio NH">
@@ -26,9 +25,10 @@ import heroImg from "@images/contact/hero.jpg";
 
         <form
             id="contact-form"
-            action="https://form-relay.hoelting.dev/form/contact"
+            action="https://form-relay.hoelting.dev/form/studio-nh"
+            method="post"
         >
-            <h3>Coffee Talk</h3>
+            <h3>Coffee-Talk</h3>
 
             <label for="name">Name</label>
             <input type="text" id="name" name="name" required />
@@ -46,8 +46,8 @@ import heroImg from "@images/contact/hero.jpg";
 
         <section id="information">
             <span class="name">Nicole Hoelting</span>
-            <span class="street"> Starenweg Zehn / 10 </span>
-            <span class="city"> Drei Drei Null Drei Vier/33034 Brakel </span>
+            <span class="street"> Starenweg Zehn </span>
+            <span class="city"> Drei Drei Null Drei Vier Brakel </span>
             <span class="email">
                 E-Mail: <a href="mailto:studio@nicolehoelting.de"
                     >studio@nicolehoelting.de</a
@@ -56,6 +56,11 @@ import heroImg from "@images/contact/hero.jpg";
             <span class="tel">
                 Fon: <a href="tel:+4915253484096">+49 152 53484096</a>
             </span>
+        </section>
+
+        <section id="reviews">
+            <h2>Rezensionen</h2>
+            <ReviewsSwiper />
         </section>
     </main>
 </BasicLayout>
@@ -102,6 +107,7 @@ import heroImg from "@images/contact/hero.jpg";
         h3 {
             grid-column: 1 / 3;
             font-size: 1.5em;
+            text-transform: uppercase;
         }
 
         label {
@@ -170,6 +176,10 @@ import heroImg from "@images/contact/hero.jpg";
                 text-decoration: underline;
             }
         }
+    }
+
+    #reviews {
+        margin-top: 2em;
     }
 </style>
 

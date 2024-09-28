@@ -4,7 +4,7 @@ import { Schema } from "astro-seo-schema";
 import { getCollection, getEntry } from "astro:content";
 import { getImage } from "astro:assets";
 
-import BasicLayout from "@layouts/BasicLayout.astro";
+import EntryLayout from "@layouts/EntryLayout.astro";
 
 export const getStaticPaths = (async () => {
     const projects = await getCollection("projects", ({ data }) => {
@@ -29,7 +29,7 @@ const thumbnailPath = (
 ).src;
 ---
 
-<BasicLayout title={`${project.data.titel} - Studio NH`}>
+<EntryLayout title={`${project.data.titel} - Studio NH`}>
     <Schema
         slot="head"
         item={{
@@ -46,5 +46,6 @@ const thumbnailPath = (
             keywords: "Innenarchitektur, Design, Projekte, Interior Design",
         }}
     />
+    <h1>{project.data.titel}</h1>
     <Content />
-</BasicLayout>
+</EntryLayout>

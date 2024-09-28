@@ -20,15 +20,13 @@ Geschirr findet im Sideboard Platz. Eine große Tischplatte & hochwertiges Leder
 Verweilen ein und auf der Sitzbank finden bei Bedarf viele liebe Gäste Platz!
 
 ![Ornament](../../images/projects/bruchhausen/ornament.jpg)
-
 ![Engel](../../images/projects/bruchhausen/engel.jpg)
 
 ![Wohnzimmer](../../images/projects/bruchhausen/wohnzimmer.jpg)
 
 ![Übergang](../../images/projects/bruchhausen/uebergang.jpg)
+![Wand](../../images/projects/bruchhausen/wand.jpg)
 
 ![Esstisch](../../images/projects/bruchhausen/esstisch.jpg)
 
 ![Sitzplatz](../../images/projects/bruchhausen/sitzplatz.jpg)
-
-![Wand](../../images/projects/bruchhausen/wand.jpg)

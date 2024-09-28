@@ -22,21 +22,15 @@ ein schwerer Satin-Vorhang, edle Bambus-Wäschekörbe,
 Kerzen, Ipuro, Fotos und Erinnerungsstücke machen die Nasszelle zum ganz persönlichen Spa!
 
 ![Vorher](../../images/projects/badezimmer-bruchhausen/badschrank_alt_2-5.jpg)
-
 ![Amphore](../../images/projects/badezimmer-bruchhausen/amphore.jpg)
 
 ![Drei Fotos](../../images/projects/badezimmer-bruchhausen/dreiFotos.jpg)
 
-![Schmuckhand](../../images/projects/badezimmer-bruchhausen/schmuckhand.jpg)
-
 ![Federkranz](../../images/projects/badezimmer-bruchhausen/federkranz.jpg)
 
+![Schmuckhand](../../images/projects/badezimmer-bruchhausen/schmuckhand.jpg)
 ![Kleiderschrank](../../images/projects/badezimmer-bruchhausen/kleiderschrank.jpg)
-
 ![Vitrine](../../images/projects/badezimmer-bruchhausen/vitrine.jpg)
-
 ![Waschtisch](../../images/projects/badezimmer-bruchhausen/waschtisch.jpg)
-
 ![Federkranz](../../images/projects/badezimmer-bruchhausen/federkranz2-5.jpg)
-
 ![Wäschekorb](../../images/projects/badezimmer-bruchhausen/waeschekorb.jpg)

@@ -34,8 +34,17 @@ const artworksCollection = defineCollection({
         }),
 });
 
+const rezensionenCollection = defineCollection({
+    type: "content",
+    schema: z.object({
+        name: z.string(),
+        datum: z.date(),
+    }),
+});
+
 export const collections = {
     projects: projectsCollection,
     blog: blogCollection,
     artworks: artworksCollection,
+    rezensionen: rezensionenCollection,
 };

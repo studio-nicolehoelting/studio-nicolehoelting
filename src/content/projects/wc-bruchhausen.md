@@ -19,16 +19,11 @@ wird in modernen Accessoires wie Lampe, Handtuchhalter und Kubus-Regalen aufgegr
 Textilien und kesse Lektüre <br>
 runden die Modernität ab.
 
-![Eckregal](../../images/projects/wc-bruchhausen/eckregal_wc_2-5.jpg)
-
 ![Spiegel](../../images/projects/wc-bruchhausen/spiegel.jpg)
 
+![Eckregal](../../images/projects/wc-bruchhausen/eckregal_wc_2-5.jpg)
 ![Handtuchhalter](../../images/projects/wc-bruchhausen/handtuchhalter.jpg)
-
 ![Regale](../../images/projects/wc-bruchhausen/regale.jpg)
-
 ![Fischbild](../../images/projects/wc-bruchhausen/fischbild.jpg)
-
 ![Toilettenpapier](../../images/projects/wc-bruchhausen/toilettenpapier.jpg)
-
 ![Buch](../../images/projects/wc-bruchhausen/buch.jpg)

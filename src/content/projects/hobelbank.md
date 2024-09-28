@@ -22,7 +22,10 @@ Scherengelenk) wird hoffentlich kurzfristig bei ebay ersteigert. Der Stilbruch t
 erzeugt Spannung, und Geschichte bleibt lebendig!
 
 ![Spruch](../../images/projects/hobelbank/spruch.jpg)
+
 ![Küche](../../images/projects/hobelbank/kueche.jpg)
+
 ![Hobelbank](../../images/projects/hobelbank/hobelbank.jpg)
 ![Nah](../../images/projects/hobelbank/nah.jpg)
+
 ![Längst](../../images/projects/hobelbank/laengst.jpg)
