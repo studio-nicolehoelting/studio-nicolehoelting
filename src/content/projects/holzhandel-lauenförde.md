@@ -6,7 +6,7 @@ position: 1
 
 ## Die Aufgabe:
 
-Gestaltung neuer Büroräume der <a href="https://holzhl.com" target="_blank">HolzHandel Lauenförde GmbH</a>. Die vormals von einem Sanitärbetrieb genutzten Räumlichkeiten tragen Kaltwasser-Blau & heißes Rot an Türen & Fenstern. Bodenfliesen, Lampen, Küche... sind in die Jahre gekommen. Auch, wenn die massiven Eiche- & Ahornmöbel aus dem vorigem Firmensitz ins neue "Zuhause" einziehen, wünschen sich MitarbeiterInnen ein modern, frisches Arbeitsumfeld.
+Gestaltung neuer Büroräume der <a href="https://holzhl.com" target="_blank" ref="noopener noreferrer">HolzHandel Lauenförde GmbH</a>. Die vormals von einem Sanitärbetrieb genutzten Räumlichkeiten tragen Kaltwasser-Blau & heißes Rot an Türen & Fenstern. Bodenfliesen, Lampen, Küche... sind in die Jahre gekommen. Auch, wenn die massiven Eiche- & Ahornmöbel aus dem vorigem Firmensitz ins neue "Zuhause" einziehen, wünschen sich MitarbeiterInnen ein modern, frisches Arbeitsumfeld.
 
 ## Die Idee:
 

@@ -134,4 +134,5 @@ Viel Spaß beim Shoppen!
 <a href="https://www.boconcept.com/de-de/" target="_blank" rel="noopener noreferrer" >www.boconcept.com</a>
 
 Finde mehr und folge mir auf
-<a href="https://www.instagram.com/nicolehoelting_studio/">Instagram</a> oder Facebook unter "nicolehoelting_studio".
+<a href="https://www.instagram.com/nicolehoelting_studio/" rel="noopener noreferrer">Instagram</a>
+oder <a href="https://facebook.com/p/Studio-100086007337398" target="_blank" rel="noopener noreferrer">Facebook</a>.

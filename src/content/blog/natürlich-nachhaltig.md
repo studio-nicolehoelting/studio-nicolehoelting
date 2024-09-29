@@ -60,8 +60,8 @@ gebrauchter Waren erweitert, bieten ihren Kunden diese in
 Fundgruben erneut zum Kauf an. "Zweite Chance" heißt das
 Konzept bei IKEA. Für diesen Blog habe ich es live getestet
 und bin begeistert. <br />
-<a href="https://www.ikea.com/de/de/customer-service/services/buy-back/" target="_blank" >www.ikea.com/de/de/customer-service/services/buy-back/</a> <br />
-<a href="https://www.dornbracht-recrafted.shop/" target="_blank" >www.dornbracht-recrafted.shop/</a>
+<a href="https://www.ikea.com/de/de/customer-service/services/buy-back/" target="_blank" rel="noopener noreferrer">www.ikea.com/de/de/customer-service/services/buy-back/</a> <br />
+<a href="https://www.dornbracht-recrafted.shop/" target="_blank" rel="noopener noreferrer">www.dornbracht-recrafted.shop/</a>
 
 ![Stühle an der Straße](../../images/blog/natuerlich-nachhaltig/StuehleStrasse_q.jpg)
 
@@ -86,9 +86,9 @@ Mehrwert, z.B. als Wärmespeicher. Ganz zu schweigen von der
 fulminanten Ästhetik: die oftmals interessante Patina
 vermittelt Charakter & Wertigkeit. Bezugsquellen und Infos
 findest du online z.B. unter <br />
-<a href="https://www.ziegelkontor.de">www.ziegelkontor.de</a>
+<a href="https://www.ziegelkontor.de" target="_blank" rel="noopener noreferrer">www.ziegelkontor.de</a>
 <br />
-<a href="https://www.historische-baustoffe.de">www.historische-baustoffe.de</a>
+<a href="https://www.historische-baustoffe.de" target="_blank" rel="noopener noreferrer">www.historische-baustoffe.de</a>
 
 ![Fenster vom Schäferhof](../../images/blog/natuerlich-nachhaltig/FensterSchaeferhof_q.jpg)
 
@@ -101,12 +101,12 @@ Blick auf die Gütesiegel lohnt. Holz aus nachhaltiger,
 zertifizierter und regionaler Forstwirtschaft erfreut die
 Ökobilanz ebenso wie umweltgerechte Öle, Wachse & Leime.
 Beispiele findest du hier: <br />
-<a href="https://www.e15.com">www.e15.com</a> <br />
-<a href="https://www.team7-home.com">www.team7-home.com</a>
+<a href="https://www.e15.com" target="_blank" rel="noopener noreferrer">www.e15.com</a> <br />
+<a href="https://www.team7-home.com" target="_blank" rel="noopener noreferrer">www.team7-home.com</a>
 <br />
-<a href="https://shop.zeitraum-moebel.de">www.shop.zeitraum-moebel.de</a>
+<a href="https://shop.zeitraum-moebel.de" target="_blank" rel="noopener noreferrer">www.shop.zeitraum-moebel.de</a>
 <br />
-<a href="https://www.grueneerde.com">www.grueneerde.com</a>
+<a href="https://www.grueneerde.com" target="_blank" rel="noopener noreferrer">www.grueneerde.com</a>
 
 Ein ökologisches Möbelstück kann außerdem auch aus
 nachwachsenden oder recycelten Materialien bestehen, die
@@ -116,17 +116,17 @@ kreislauffähiger Stahlemaille für die Badewanne "Oyo Duo"
 von Kaldewei. Und der Duschkopf "Pulsify Planet" von Hans
 Grohe besteht zum Großteil aus Kunsstoffrezyklat. Stühle aus
 einem Guss, auch das ist nachhaltig: <br />
-<a href="https://hay.dk/news/hay-in-the-world-2022/elementaire-chair">www.hay.dk/news/hay-in-the-world-...</a>
+<a href="https://hay.dk/news/hay-in-the-world-2022/elementaire-chair" target="_blank" rel="noopener noreferrer">www.hay.dk/news/hay-in-the-world-...</a>
 <br />
-<a href="https://www.muuto.com/products/shop-by-family/fiber-chair-family/" >www.muuto.com/products/shop-by-fam...</a>
+<a href="https://www.muuto.com/products/shop-by-family/fiber-chair-family/" target="_blank" rel="noopener noreferrer" >www.muuto.com/products/shop-by-fam...</a>
 <br />
-<a href="https://www.magisdesign.com/de/product/bell-chair/?codice=AT&showprice=&codiva=20&valuta=EUR&stato=Austria" >www.magisdesign.com/de/product/bell-chair/</a>
+<a href="https://www.magisdesign.com/de/product/bell-chair/?codice=AT&showprice=&codiva=20&valuta=EUR&stato=Austria" target="_blank" rel="noopener noreferrer">www.magisdesign.com/de/product/bell-chair/</a>
 <br />
-<a href="https://www.vitra.com/de-de/living/product/details/tip-ton?keyword=vitra%20tip%20ton" >https://www.vitra.com/de-de/living/product/...</a>
+<a href="https://www.vitra.com/de-de/living/product/details/tip-ton?keyword=vitra%20tip%20ton" target="_blank" rel="noopener noreferrer">https://www.vitra.com/de-de/living/product/...</a>
 
 Zauberhaft, die "Lieblingsvasen" - und so vieles mehr - der
 Berliner Künstlerin Lisa Mathieu aus 100 % Altglas... <br />
-<a href="https://the-way-up.de/pages/lieblingsvasen">www.the-way-up.de/pages/lieblingsvasen</a>
+<a href="https://the-way-up.de/pages/lieblingsvasen" target="_blank" rel="noopener noreferrer">www.the-way-up.de/pages/lieblingsvasen</a>
 
 Ökobilanz statt Wegwerfgesellschaft. Umweltzone im eigenen
 Zuhause - zuversichtlich, zukunftsfähig. <br />
@@ -137,13 +137,13 @@ Ist weniger nicht vielleicht doch mehr?
 "Als ich mich auf den Weg machte, die Welt zu retten" - in
 seinem Buch nimmt uns Martin Häusler mit auf eine Reise in
 die Nachhaltigkeit. <br />
-<a href="https://scorpio-verlag.de/Buecher/523/AlsichmichaufdenWegmachtedieErdezuretten.html" >www.scorpio-verlag.de/Buecher/523/Alsichmich...</a>
+<a href="https://scorpio-verlag.de/Buecher/523/AlsichmichaufdenWegmachtedieErdezuretten.html" target="_blank" rel="noopener noreferrer">www.scorpio-verlag.de/Buecher/523/Alsichmich...</a>
 
 ![Handgepäck](../../images/blog/natuerlich-nachhaltig/Handgepaeck_q.jpg)
 
 Silbermond formuliert es musikalisch:
-<a href="https://youtu.be/ohHJjPSsW8c">https://youtu.be/ohHJjPSsW8c</a>
+<a href="https://youtu.be/ohHJjPSsW8c" target="_blank" rel="noopener noreferrer">https://youtu.be/ohHJjPSsW8c</a>
 
 Finde mehr und folge mir auf
-<a href="https://www.instagram.com/nicolehoelting_studio/">Instagram</a>
+<a href="https://www.instagram.com/nicolehoelting_studio/" target="_blank" rel="noopener noreferrer">Instagram</a>
 oder Facebook unter "nicolehoelting_studio".

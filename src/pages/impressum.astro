@@ -1,0 +1,65 @@
+---
+import BasicLayout from "@layouts/BasicLayout.astro";
+---
+
+<BasicLayout title="Impressum - Studio NH">
+    <main id="main">
+        <section>
+            <h1>Impressum</h1>
+            <p>Nicole Hölting<br />Starenweg 10<br />33034 Brakel</p>
+            <p>USt-IdNr.: DE272063844</p>
+            <p>FON: <a href="tel:+4915253484096">0152 53484096</a></p>
+            <a href="mailto:studio@nicolehoelting.de?subject=Kontakt"
+                >studio&#064;nicolehoelting&#046;de</a
+            >
+        </section>
+        <section id="webdesign">
+            <h1>Webdesign</h1>
+            <p>Moritz Hölting</p>
+            <a href="https://hoelting.dev" target="_blank">www.hoelting.dev</a>
+            <a href="mailto:webdesign@hoelting.dev"
+                >webdesign&#064;hoelting&#046;dev</a
+            >
+        </section>
+    </main>
+</BasicLayout>
+
+<style lang="scss">
+    #main {
+        color: var(--logo-text-color);
+        font-size: 1.5em;
+        margin: 2em;
+        scroll-margin-top: 2em;
+
+        @media only screen and (min-width: $breakpoint-xs) {
+            font-size: 2em;
+        }
+
+        @media only screen and (min-width: $breakpoint-s) {
+            margin: 5em;
+            scroll-margin-top: 5em;
+        }
+
+        h1 {
+            text-transform: uppercase;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+
+            &:hover {
+                color: var(--logo-color);
+                text-decoration: underline;
+            }
+        }
+
+        > section:not(:first-child) {
+            margin-top: 1em;
+        }
+
+        #webdesign a {
+            display: block;
+        }
+    }
+</style>
