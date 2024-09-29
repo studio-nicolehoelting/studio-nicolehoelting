@@ -5,12 +5,24 @@ $breakpoint-l: 1280px;
 
 @property --logo-color {
     syntax: "<color>";
-    inherits: false;
+    inherits: true;
     initial-value: #b59b7e;
 }
 
 @property --logo-text-color {
     syntax: "<color>";
-    inherits: false;
+    inherits: true;
     initial-value: #88704e;
+}
+
+@property --link-color {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: black;
+}
+
+@property --highlight-color {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: white;
 }

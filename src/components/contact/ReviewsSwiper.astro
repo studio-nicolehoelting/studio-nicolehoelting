@@ -120,6 +120,10 @@ const reviews = await getCollection("rezensionen").then((reviews) =>
         .swiper-slide img {
             display: block;
             object-fit: cover;
+
+            :root[data-theme="dark"] & {
+                filter: brightness(0.6);
+            }
         }
     }
 </style>

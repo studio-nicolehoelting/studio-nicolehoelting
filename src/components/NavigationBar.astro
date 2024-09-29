@@ -1,7 +1,6 @@
 ---
-import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
-import Logo from "@components/Logo.astro";
+import ThemeToggleButton from "./ThemeToggleButton.astro";
 
 const menu = [
     ["/projects/", "projects"],
@@ -36,6 +35,9 @@ const menu = [
                 );
             })
         }
+        <li class="element">
+            <ThemeToggleButton />
+        </li>
     </ul>
 </nav>
 
@@ -132,7 +134,7 @@ const menu = [
 
                     &:hover {
                         text-decoration: none;
-                        border-bottom-color: black;
+                        border-bottom-color: var(--link-color);
                     }
 
                     @media (min-width: $breakpoint-s) {
@@ -142,7 +144,7 @@ const menu = [
                 }
 
                 &.active span {
-                    border-bottom: 2px black solid;
+                    border-bottom: 2px var(--link-color) solid;
 
                     * {
                         cursor: pointer;
@@ -159,7 +161,7 @@ const menu = [
 
                 > span,
                 > a {
-                    color: black;
+                    color: var(--link-color);
                 }
             }
         }
@@ -245,13 +247,19 @@ const menu = [
 </style>
 
 <script>
-    const nav = document.querySelector("nav.navbar") as HTMLElement;
-    const navToggle = nav.querySelector(
-        ".mobile-nav-toggle"
-    ) as HTMLButtonElement;
-    const ul = nav.querySelector("ul")!;
+    function afterSwap() {
+        const nav = document.querySelector("nav.navbar") as HTMLElement;
+        const navToggle = nav.querySelector(
+            ".mobile-nav-toggle"
+        ) as HTMLButtonElement;
+        const ul = nav.querySelector("ul")!;
 
-    navToggle.addEventListener("click", () => {
-        ul.classList.toggle("mobile-visible");
-    });
+        navToggle.addEventListener("click", () => {
+            ul.classList.toggle("mobile-visible");
+        });
+    }
+
+    document.addEventListener("astro:after-swap", afterSwap);
+
+    afterSwap();
 </script>

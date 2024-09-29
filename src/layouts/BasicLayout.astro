@@ -13,7 +13,7 @@ const { title, footerText } = Astro.props;
 
 <BaseLayout {title}>
     <slot slot="head" name="head" />
-    <NavigationBar />
+    <NavigationBar transition:name="navbar" transition:animate="none" />
     <div id="content">
         <slot />
     </div>

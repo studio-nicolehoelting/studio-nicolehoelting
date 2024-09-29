@@ -1,6 +1,8 @@
 ---
 import type { TransitionAnimationValue } from "astro";
 import { Head } from "astro-capo";
+import { ViewTransitions } from "astro:transitions";
+
 import MatomoAnalytics from "@components/MatomoAnalytics.astro";
 import "@styles/styles.scss";
 
@@ -52,6 +54,7 @@ const { title, transitionAnimate, noTracking = false } = Astro.props;
             href="/rss.xml"
         />
         <title>{title}</title>
+        <ViewTransitions />
         {!noTracking && <MatomoAnalytics />}
         <slot name="head" />
     </Head>
@@ -59,3 +62,11 @@ const { title, transitionAnimate, noTracking = false } = Astro.props;
         <slot />
     </body>
 </html>
+
+<script>
+    import { init as initTheme } from "@scripts/darkmode.ts";
+
+    document.addEventListener("astro:after-swap", initTheme);
+
+    initTheme();
+</script>

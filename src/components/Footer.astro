@@ -61,6 +61,19 @@ const { text = "Kleine Dinge\nmit grosser Liebe tun." } = Astro.props;
         overflow-x: hidden;
         background-color: var(--logo-color);
 
+        @supports (
+            background-color:
+                color-mix(in srgb, var(--logo-color) 80%, transparent)
+        ) {
+            :root[data-theme="dark"] & {
+                background-color: color-mix(
+                    in srgb,
+                    var(--logo-color) 75%,
+                    black
+                );
+            }
+        }
+
         .footer-grid {
             display: grid;
             grid-template-columns: auto;
@@ -148,7 +161,7 @@ const { text = "Kleine Dinge\nmit grosser Liebe tun." } = Astro.props;
                 }
 
                 a {
-                    color: black;
+                    color: var(--link-color);
 
                     &:hover {
                         opacity: 0.8;
@@ -157,7 +170,7 @@ const { text = "Kleine Dinge\nmit grosser Liebe tun." } = Astro.props;
 
                 .datenschutz,
                 .impressum {
-                    color: black;
+                    color: var(--link-color);
                     text-decoration: none;
                     font-size: 1.25em;
                     text-align: center;
