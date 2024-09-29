@@ -17,6 +17,10 @@ export function init() {
         preferred = "dark";
     }
 
-    const current = window.localStorage.getItem("theme") || preferred;
+    const saved = window.localStorage.getItem("theme");
+    if (!saved) {
+        window.localStorage.setItem("theme", preferred);
+    }
+    const current = saved || preferred;
     (document.querySelector(":root") as HTMLElement).dataset.theme = current;
 }

@@ -42,14 +42,23 @@ const menu = [
 </nav>
 
 <style lang="scss">
+    :global(:root) {
+        position: relative;
+    }
+
+    :global(body) {
+        max-width: 100vw;
+        overflow-x: hidden;
+        overflow-x: clip;
+    }
+
     .navbar {
         box-sizing: border-box;
-        padding-top: 0px;
         margin: 0px;
         padding: 0px;
         max-width: 100%;
         display: grid;
-        grid-template-columns: auto;
+        grid-template-columns: 1fr auto;
         grid-template-rows: auto auto;
         grid-template-areas: "logo" "nav";
         align-items: center;
@@ -69,7 +78,7 @@ const menu = [
             flex-direction: column;
             flex-wrap: nowrap;
             justify-content: flex-start;
-            position: fixed;
+            position: absolute;
             inset: 0 0 0 30%;
             padding: 0 2em;
             padding-top: min(20vh, 10rem);
@@ -167,11 +176,9 @@ const menu = [
         }
 
         .mobile-nav-toggle {
-            position: fixed;
-            width: 3rem;
             aspect-ratio: 1;
-            top: 1.5rem;
-            right: 1.5rem;
+            width: 3rem;
+            margin: 1.5rem;
             z-index: 100;
             border: 2px black solid;
             display: block;
@@ -179,6 +186,11 @@ const menu = [
             color: unset;
             padding: 0.25rem;
             border-radius: 20%;
+
+            &[aria-open="true"] {
+                color: var(--highlight-color);
+                border-color: var(--highlight-color);
+            }
 
             svg {
                 padding-top: 3px;
@@ -195,8 +207,9 @@ const menu = [
         .logo-container {
             grid-area: logo;
             display: flex;
-            justify-content: center;
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
             height: 120px;
 
             @media (min-width: $breakpoint-s) {
@@ -231,7 +244,6 @@ const menu = [
                     text-transform: uppercase;
                     white-space: nowrap;
                     align-content: center;
-                    margin-inline: 1cm;
                     text-align: center;
                     line-height: 120px;
 
@@ -256,6 +268,10 @@ const menu = [
 
         navToggle.addEventListener("click", () => {
             ul.classList.toggle("mobile-visible");
+            navToggle.setAttribute(
+                "aria-open",
+                ul.classList.contains("mobile-visible").toString()
+            );
         });
     }
 
