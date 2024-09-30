@@ -1,7 +1,7 @@
 ---
-titel: Ehrenplatz für Uropas Werkbank - Gemüsereibe anstatt Holzhobel
+titel: Gemüsereibe statt Holzhobel
 thumbnail: ../../images/projects/hobelbank/hobelbank.jpg
-position: 3
+priorität: 4
 ---
 
 HOMESTORY <br>
@@ -20,10 +20,6 @@ Küchenparties dient das Erbstück als Ablagefläche für das Buffet. Das Anthra
 das notwendige Gewicht. Eine antike Arbeitsleuchte zur Wandmontage (Kaiser Idell, Mod. 6718,
 Scherengelenk) wird hoffentlich kurzfristig bei ebay ersteigert. Der Stilbruch tut dem Raum gut,
 erzeugt Spannung, und Geschichte bleibt lebendig!
-
-![Spruch](../../images/projects/hobelbank/spruch.jpg)
-
-![Küche](../../images/projects/hobelbank/kueche.jpg)
 
 ![Hobelbank](../../images/projects/hobelbank/hobelbank.jpg)
 ![Nah](../../images/projects/hobelbank/nah.jpg)

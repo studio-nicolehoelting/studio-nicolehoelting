@@ -1,5 +1,5 @@
 ---
-position: 15
+priorität: 15
 titel: M & F
 bilder:
     - ../../images/artworks/mann_frau.png

@@ -1,5 +1,5 @@
 ---
-position: 6
+priorität: 6
 titel: Kraft II
 bilder:
     - ../../images/artworks/kraft_2.jpg

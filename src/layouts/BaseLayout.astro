@@ -54,7 +54,7 @@ const { title, transitionAnimate, noTracking = false } = Astro.props;
             href="/rss.xml"
         />
         <title>{title}</title>
-        <ViewTransitions />
+        {(import.meta as any).env.PROD && <ViewTransitions />}
         {!noTracking && <MatomoAnalytics />}
         <slot name="head" />
     </Head>

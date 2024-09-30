@@ -1,5 +1,5 @@
 ---
-position: 8
+priorität: 8
 titel: Meeresrauschen
 bilder:
     - ../../images/artworks/meeresrauschen.jpg

@@ -1,5 +1,5 @@
 ---
-position: 17
+priorität: 17
 titel: Luna
 bilder:
     - ../../images/artworks/luna.png

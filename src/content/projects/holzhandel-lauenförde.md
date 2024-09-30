@@ -1,7 +1,7 @@
 ---
 titel: Wo Holzwürmer arbeiten
 thumbnail: ../../images/projects/holzhandel/03_Sitzecke_q.jpg
-position: 4
+priorität: 2
 ---
 
 ## Die Aufgabe:
@@ -20,11 +20,9 @@ Modernität zieht durch schwarze, schmale Schreibtischleuchten in die Büros ein
 Beim Geschäftsführer nehmen Kunden & Kollegen in bequemen Ledersesseln auf einem Rentierfell platz. Der gebogene Laptoptisch aus heimischer Eiche ermöglicht, neben der Schreibtischarbeit, die Arbeitsposition zu wechseln, nimmt aber auch Getränke der Gäste auf. Schlichtes Understatement. Und eine entspannte Atmosphäre für gute Gespräche.
 Das Anthrazit & Weiß der geradlinigen Küche harmoniert perfekt mit dem Echtholz-Tisch der alten Teeküche. Leichte Stühle aus schwarz lackiertem Metall verbreiten skandinavischen Chic & eine schwarze Hängeleuchte in Röhrenform über dem Tisch erinnert an einen Baumstamm. Kleine Momente der Auszeit genießt man hier nun gern bei Kaffee, Tee & Baumkuchen... Immer dabei - Hund Edda.
 
-![Vorher](../../images/projects/holzhandel/frueher.jpg)
-![Lager innen](../../images/projects/holzhandel/02_Lager_innen_2-5v.jpg)
-
 ![Sitzecke](../../images/projects/holzhandel/03_Sitzecke_q.jpg)
 
+![Lager innen](../../images/projects/holzhandel/02_Lager_innen_2-5v.jpg)
 ![Feuer Teekanne](../../images/projects/holzhandel/03a_FeuerTeekanne_2-5v.jpg)
 ![Bürostuhl](../../images/projects/holzhandel/03b_Buerostuhl_2-5v.jpg)
 ![Garderobe](../../images/projects/holzhandel/04_GarderobeBild_2-5v.jpg)

@@ -1,5 +1,5 @@
 ---
-position: 3
+priorität: 3
 titel: Begegnungen
 bilder:
     - ../../images/artworks/begegnungen.png

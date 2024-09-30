@@ -6,7 +6,7 @@ const projectsCollection = defineCollection({
         z.object({
             thumbnail: image(),
             titel: z.string(),
-            position: z.number(),
+            priorität: z.number(),
             entwurf: z.boolean().optional(),
         }),
 });
@@ -28,7 +28,7 @@ const artworksCollection = defineCollection({
     type: "content",
     schema: ({ image }) =>
         z.object({
-            position: z.number(),
+            priorität: z.number(),
             titel: z.string(),
             bilder: z.array(image()),
         }),

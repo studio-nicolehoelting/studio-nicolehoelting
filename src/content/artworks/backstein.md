@@ -1,5 +1,5 @@
 ---
-position: 12
+priorität: 12
 titel: Backstein
 bilder:
     - ../../images/artworks/backstein.jpg

@@ -1,7 +1,7 @@
 ---
 titel: Von Sandkuchen zu Pizzasteinen
 thumbnail: ../../images/projects/outdoorkueche/kuechenblock.jpg
-position: 5
+priorität: 2
 ---
 
 HOMESTORY <br>
@@ -18,11 +18,9 @@ gekocht werden. Moritz und Jette backen nun anstatt Sandkuchen im Kletterhaus le
 dem Pizzastein. Besonders abends wird es am großen Teak-Esstisch nebenan gemütlich und unter der
 Solar-Lichterkette kann man bis spät in die Nacht hinein Karten spielen...
 
-![Vorher](../../images/projects/outdoorkueche/kletterhaus.jpg)
-![Grill](../../images/projects/outdoorkueche/grill.jpg)
-
 ![Küchenblock](../../images/projects/outdoorkueche/kuechenblock.jpg)
 
+![Grill](../../images/projects/outdoorkueche/grill.jpg)
 ![Utensilo](../../images/projects/outdoorkueche/utensilo.jpg)
 
 ![Weitblick](../../images/projects/outdoorkueche/weitblick.jpg)

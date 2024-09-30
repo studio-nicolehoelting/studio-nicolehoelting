@@ -1,5 +1,5 @@
 ---
-position: 16
+priorität: 16
 titel: Fatamorgana
 bilder:
     - ../../images/artworks/fatamorgana.png

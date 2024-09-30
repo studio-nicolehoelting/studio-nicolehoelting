@@ -1,5 +1,5 @@
 ---
-position: 21
+priorität: 21
 titel: Sonya
 bilder:
     - ../../images/artworks/sonya.jpg

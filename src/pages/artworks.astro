@@ -4,7 +4,7 @@ import { Image } from "astro:assets";
 import BasicLayout from "@layouts/BasicLayout.astro";
 
 const artworks = await getCollection("artworks").then((projects) =>
-    projects.sort((a, b) => a.data.position - b.data.position)
+    projects.sort((a, b) => b.data.priorität - a.data.priorität)
 );
 ---
 
@@ -65,6 +65,7 @@ const artworks = await getCollection("artworks").then((projects) =>
             padding-bottom: 1em;
             border: 2px solid var(--logo-color);
             text-decoration: none;
+            color: var(--logo-text-color);
 
             transition: box-shadow 0.2s;
 
@@ -76,11 +77,10 @@ const artworks = await getCollection("artworks").then((projects) =>
                 width: 100%;
                 height: auto;
                 aspect-ratio: 1;
-                object-fit: cover;
+                object-fit: contain;
             }
 
             h2 {
-                color: var(--logo-text-color);
                 text-align: center;
                 margin-top: 0.25em;
                 min-height: 3em;

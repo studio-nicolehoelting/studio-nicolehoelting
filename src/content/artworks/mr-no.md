@@ -1,5 +1,5 @@
 ---
-position: 4
+priorität: 4
 titel: Mr. No
 bilder:
     - ../../images/artworks/mr-no.jpg

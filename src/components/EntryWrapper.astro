@@ -1,23 +1,9 @@
----
-import { Icon } from "astro-icon/components";
-import BasicLayout from "./BasicLayout.astro";
-
-interface Props {
-    title: string;
-}
-
-const { title } = Astro.props;
----
-
-<BasicLayout {title}>
-    <slot name="head" slot="head" />
-    <main>
-        <slot />
-    </main>
-</BasicLayout>
+<main id="main">
+    <slot />
+</main>
 
 <style lang="scss">
-    main {
+    #main {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -69,6 +55,10 @@ const { title } = Astro.props;
 
             :global(img) {
                 width: auto;
+
+                @media only screen and (min-width: $breakpoint-s) {
+                    max-width: calc(50% - 1em);
+                }
             }
         }
     }

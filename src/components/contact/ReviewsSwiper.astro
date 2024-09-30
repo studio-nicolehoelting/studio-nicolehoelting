@@ -49,7 +49,6 @@ const reviews = await getCollection("rezensionen").then((reviews) =>
             delay: 5000,
             disableOnInteraction: true,
         },
-        autoHeight: true,
         rewind: true,
         grabCursor: true,
         pagination: {
@@ -68,6 +67,7 @@ const reviews = await getCollection("rezensionen").then((reviews) =>
     .reviews-swiper {
         width: 100%;
         height: 100%;
+        border: 2px solid var(--logo-color);
 
         .swiper-button-next,
         .swiper-button-prev {

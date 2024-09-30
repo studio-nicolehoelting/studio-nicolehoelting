@@ -7,7 +7,7 @@ import BasicLayout from "@layouts/BasicLayout.astro";
 const projects = await getCollection("projects", ({ data }) => {
     return import.meta.env.PROD ? data.entwurf !== true : true;
 }).then((projects) =>
-    projects.sort((a, b) => a.data.position - b.data.position)
+    projects.sort((a, b) => b.data.priorität - a.data.priorität)
 );
 ---
 
@@ -75,13 +75,13 @@ const projects = await getCollection("projects", ({ data }) => {
                 aspect-ratio: 1;
                 object-fit: cover;
 
-                filter: grayscale(90%);
-                transition: filter 0.3s;
+                // filter: grayscale(90%);
+                // transition: filter 0.3s;
             }
 
-            &:hover img {
-                filter: none;
-            }
+            // &:hover img {
+            //     filter: none;
+            // }
 
             h2 {
                 color: var(--logo-text-color);

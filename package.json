@@ -13,7 +13,6 @@
         "@astrojs/rss": "^4.0.7",
         "@astrojs/sitemap": "^3.1.6",
         "@iconify-json/fa": "^1.2.0",
-        "@iconify-json/fa-brands": "^1.2.0",
         "astro": "^4.15.9",
         "astro-capo": "^0.0.1",
         "astro-icon": "^1.1.1",
@@ -21,7 +20,7 @@
         "astro-seo-schema": "^4.0.2",
         "markdown-it": "^14.1.0",
         "sanitize-html": "^2.13.0",
-        "sass": "^1.79.3",
+        "sass": "^1.79.4",
         "schema-dts": "^1.1.2",
         "sharp": "^0.33.5",
         "swiper": "^11.1.14"

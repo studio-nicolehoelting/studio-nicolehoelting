@@ -1,7 +1,7 @@
 ---
 titel: Transformation ins Neue Jahrtausend
-thumbnail: ../../images/projects/bruchhausen/wohnzimmer.jpg
-position: 2
+thumbnail: ../../images/projects/bruchhausen/Header_Schrankwand_q.jpg
+priorität: 5
 ---
 
 Die Aufgabe:
@@ -19,14 +19,12 @@ offenen Räume. Im Esszimmer greift warme Eiche das Holz des Wohnzimmers auf und
 Geschirr findet im Sideboard Platz. Eine große Tischplatte & hochwertiges Leder am Essplatz laden zum
 Verweilen ein und auf der Sitzbank finden bei Bedarf viele liebe Gäste Platz!
 
-![Ornament](../../images/projects/bruchhausen/ornament.jpg)
 ![Engel](../../images/projects/bruchhausen/engel.jpg)
 
 ![Wohnzimmer](../../images/projects/bruchhausen/wohnzimmer.jpg)
+![Esstisch](../../images/projects/bruchhausen/Esstisch_Bruchhausen_q.jpg)
 
 ![Übergang](../../images/projects/bruchhausen/uebergang.jpg)
 ![Wand](../../images/projects/bruchhausen/wand.jpg)
-
-![Esstisch](../../images/projects/bruchhausen/esstisch.jpg)
 
 ![Sitzplatz](../../images/projects/bruchhausen/sitzplatz.jpg)

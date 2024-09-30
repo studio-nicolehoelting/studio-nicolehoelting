@@ -1,5 +1,5 @@
 ---
-position: 13
+priorität: 13
 titel: Blauer Block
 bilder:
     - ../../images/artworks/blauer_block.jpg

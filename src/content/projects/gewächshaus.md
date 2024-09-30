@@ -1,7 +1,7 @@
 ---
 titel: Klein neben Gross
 thumbnail: ../../images/projects/gewächshaus/aussen.jpg
-position: 6
+priorität: 1
 ---
 
 HOMESTORY <br>
@@ -22,10 +22,7 @@ Schmökern im Hängesessel, sogar bei Regen. Glühweintrinken im Schnee. Tomaten
 Immer hübsch anzusehen!
 
 ![Aussen](../../images/projects/gewächshaus/aussen.jpg)
-
-![Vorher](../../images/projects/gewächshaus/schuppen.jpg)
-![Hängesessel](../../images/projects/gewächshaus/haengesessel.jpg)
-
 ![Bufflon](../../images/projects/gewächshaus/bufflon.jpg)
 
+![Hängesessel](../../images/projects/gewächshaus/haengesessel.jpg)
 ![Tisch](../../images/projects/gewächshaus/tisch-aussen.jpg)
