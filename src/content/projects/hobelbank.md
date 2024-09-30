@@ -1,7 +1,7 @@
 ---
-titel: Hobelbank
+titel: Ehrenplatz für Uropas Werkbank - Gemüsereibe anstatt Holzhobel
 thumbnail: ../../images/projects/hobelbank/hobelbank.jpg
-position: 6
+position: 3
 ---
 
 HOMESTORY <br>

@@ -1,7 +1,7 @@
 ---
-titel: Bruchhausen
+titel: Transformation ins Neue Jahrtausend
 thumbnail: ../../images/projects/bruchhausen/wohnzimmer.jpg
-position: 4
+position: 2
 ---
 
 Die Aufgabe:

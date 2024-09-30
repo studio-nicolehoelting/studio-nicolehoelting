@@ -1,7 +1,7 @@
 ---
-titel: Outdoorküche
+titel: Von Sandkuchen zu Pizzasteinen
 thumbnail: ../../images/projects/outdoorkueche/kuechenblock.jpg
-position: 7
+position: 5
 ---
 
 HOMESTORY <br>

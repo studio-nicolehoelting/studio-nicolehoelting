@@ -1,7 +1,7 @@
 ---
-titel: Gewächshaus
+titel: Klein neben Gross
 thumbnail: ../../images/projects/gewächshaus/aussen.jpg
-position: 10
+position: 6
 ---
 
 HOMESTORY <br>

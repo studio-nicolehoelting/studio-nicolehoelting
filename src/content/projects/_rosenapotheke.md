@@ -1,5 +1,5 @@
 ---
-titel: Rosenapotheke
+titel: Hygge auf Rezept
 thumbnail: ../../images/projects/rosenapotheke/musterstrümpfe.jpg
 position: 3
 entwurf: true

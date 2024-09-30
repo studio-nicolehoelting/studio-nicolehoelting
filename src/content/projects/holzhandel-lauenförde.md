@@ -1,7 +1,7 @@
 ---
-titel: Holzhandel Lauenförde
+titel: Wo Holzwürmer arbeiten
 thumbnail: ../../images/projects/holzhandel/03_Sitzecke_q.jpg
-position: 1
+position: 4
 ---
 
 ## Die Aufgabe:

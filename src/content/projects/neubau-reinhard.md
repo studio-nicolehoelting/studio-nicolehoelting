@@ -1,7 +1,7 @@
 ---
-titel: Neubau Reinhardt
+titel: Bungalow mit viel Liebe zum Detail
 thumbnail: ../../images/projects/neubau-reinhardt/grenzstein.jpg
-position: 2
+position: 1
 ---
 
 <h1>Ein Bungalow mit viel Liebe zum Detail</h1>
