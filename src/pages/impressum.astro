@@ -4,7 +4,7 @@ import BasicLayout from "@layouts/BasicLayout.astro";
 
 <BasicLayout title="Impressum - Studio NH">
     <main id="main">
-        <section>
+        <section id="impressum">
             <h1>Impressum</h1>
             <p>Nicole Hölting<br />Starenweg 10<br />33034 Brakel</p>
             <p>USt-IdNr.: DE272063844</p>
@@ -20,6 +20,62 @@ import BasicLayout from "@layouts/BasicLayout.astro";
             <a href="mailto:webdesign@hoelting.dev"
                 >webdesign&#064;hoelting&#046;dev</a
             >
+        </section>
+        <section id="fotografie">
+            <h1>Fotografie</h1>
+            <p>Nicole Hölting</p>
+            <p>Ulrich Wenzel</p>
+        </section>
+        <section id="texte">
+            <h1>Texte</h1>
+            <p>Nicole Hölting</p>
+        </section>
+
+        <section id="dankeschönst">
+            <h1>Dankeschönst</h1>
+            <p>
+                Meiner Familie möchte ich das dickste Dankeschön überhaupt
+                aussprechen - für das Mittragen meines Studiums! Nur so war die
+                Zeit für mich derart bereichernd & der großartige Abschluss
+                möglich. Dankeschönst an jeden einzelnen von euch!
+            </p>
+            <p>
+                Danke, Thorsten, für das Vertrauen, das du immer wieder in mich
+                setzt, fürs Mutmachen, fürs Mitfreuen, für die technische
+                Unterstützung, fürs Aufbauen, für die Mitgestaltung der
+                Printmedien,... Danke, lieber Thorsten, für den Champagner!
+            </p>
+            <p>
+                Danke, Jette, für die unzähligen Nachhilfestunden in Sachen
+                Social Media - echte Herausforderungen für die "alte Mutti",
+                aber total spannend... Danke, liebe Jette, für Hashtags, Filter,
+                Filmchen und dadurch bestimmt so manchen Follower!
+            </p>
+            <p>
+                Danke, Moritz, für deine unendliche Geduld - immer wieder andere
+                Ideen, immer wieder neue Blogthemen, Projekte... Danke für dein
+                technisches Know-How, aber ganz besonders auch für deinen Blick
+                fürs Schöne & deine Kreativität. Danke, lieber Mo, für meine so
+                zauberschön gestaltete Website!
+            </p>
+            <p>
+                Meinem Fotografen Ulli danke ich für meinen Gesichts-Muskelkater
+                - Lächeln auf "Ready?" & das über Stunden! Reichlich großartiges
+                Rohmaterial. Danke, lieber Ulli, für meine tollen Portraits!
+            </p>
+            <p>
+                Meiner lieben Freundin Heike danke ich, dass ich auf dem
+                stillgelegten Firmengelände ihres Großvaters so coole Fotos von
+                mir machen durfte. Danke, Heike, für die einzigartige Kulisse &
+                das perfekte Wetter, das du für mich bestellt hast!
+            </p>
+            <p>
+                Meinen Kundinnen & Kunden danke ich für die köstlichen Espressi,
+                die ihr mir beim Fotoshooting in euren Räumlichkeiten serviert
+                habt. Ich danke auch für das Bereitstellen von Archivfotos.
+                Nicht selbstverständlich: Danke, ihr Lieben, für den Einblick in
+                euer ganz persönliches Zuhause!
+            </p>
         </section>
     </main>
 </BasicLayout>
@@ -40,6 +96,17 @@ import BasicLayout from "@layouts/BasicLayout.astro";
             scroll-margin-top: 5em;
         }
 
+        @media only screen and (min-width: $breakpoint-m) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+                "impressum webdesign"
+                "texte fotografie"
+                "danke danke";
+            align-items: start;
+            gap: 2em;
+        }
+
         h1 {
             text-transform: uppercase;
         }
@@ -57,10 +124,51 @@ import BasicLayout from "@layouts/BasicLayout.astro";
 
         > section:not(:first-child) {
             margin-top: 1em;
+
+            @media only screen and (min-width: $breakpoint-m) {
+                margin-top: 0;
+            }
         }
 
-        #webdesign a {
-            display: block;
+        #impressum {
+            @media only screen and (min-width: $breakpoint-m) {
+                grid-area: impressum;
+            }
+        }
+
+        #webdesign {
+            @media only screen and (min-width: $breakpoint-m) {
+                grid-area: webdesign;
+            }
+
+            a {
+                display: block;
+            }
+        }
+
+        #fotografie {
+            @media only screen and (min-width: $breakpoint-m) {
+                grid-area: fotografie;
+            }
+        }
+
+        #texte {
+            @media only screen and (min-width: $breakpoint-m) {
+                grid-area: texte;
+            }
+        }
+
+        #dankeschönst {
+            margin-top: 5em;
+            font-size: 0.75em;
+
+            @media only screen and (min-width: $breakpoint-m) {
+                grid-area: danke;
+            }
+
+            p {
+                margin-bottom: 1em;
+            }
         }
     }
 </style>
