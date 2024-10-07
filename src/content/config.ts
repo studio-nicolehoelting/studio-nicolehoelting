@@ -7,6 +7,7 @@ const projectsCollection = defineCollection({
             thumbnail: image(),
             hero: image(),
             titel: z.string(),
+            untertitel: z.string().optional(),
             priorität: z.number(),
             entwurf: z.boolean().optional(),
         }),

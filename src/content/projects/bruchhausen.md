@@ -1,24 +1,12 @@
 ---
 titel: Transformation ins Neue Jahrtausend
+untertitel: Endlich Farbe.
 thumbnail: ../../images/projects/bruchhausen/Header_Schrankwand_q.jpg
 hero: ../../images/projects/bruchhausen/hero.jpg
 priorität: 5
 ---
 
-Die Aufgabe:
-<br>Umgestaltung des Wohn- & Esszimmers, Neuanschaffung entsprechender Möbel. Der dunkle
-Nussbaum-Charme der 1960er-Jahre soll einem modernen Look weichen, Wohn- und Essbereich optisch
-zusammengehören. Opa Heinz wünscht sich einen großen Fernseher zum Fußball-Schauen, Oma Thea viel
-Platz für Familie & Freunde.
-<br>
-<br>Die Idee:
-<br>Modulare, leichte Wohnmöbel stehen vor einer Riemchenwand aus Stein. Trotz seiner Größe ordnet
-sich der TV-Bildschirm unter. Indirektes Licht im Glasschrank schafft Stimmung oder entlastet das Auge
-beim Fernsehen. Komplettiert wird das Ensemble durch heimische Kunst aus Detmold (Engel-Skulptur, Gabi
-Maahs). Mutiges Türkis schenkt ganzjährig Frische und verbindet durch Wandvorsprünge und Lese-Ecke die
-offenen Räume. Im Esszimmer greift warme Eiche das Holz des Wohnzimmers auf und ist doch eigenständig.
-Geschirr findet im Sideboard Platz. Eine große Tischplatte & hochwertiges Leder am Essplatz laden zum
-Verweilen ein und auf der Sitzbank finden bei Bedarf viele liebe Gäste Platz!
+So kann es aussehen, wenn ein Wohn-Esszimmer einer kräftigen Frischekur unterzogen wird. Die dunklen, mit Schnitzerei verzierten Nussbaum-Möbel aus den 1970er-Jahren wichen klaren Linien und hochwertigen Materialien. Oma freut sich über einen großen Esstisch mit Lederstühlen und -bank für die Familie, Opa über einen komfortablen Bildschirm für Fussball-Abende mit Freunden.
 
 ![Engel](../../images/projects/bruchhausen/engel.jpg)
 

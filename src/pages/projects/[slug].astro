@@ -56,7 +56,7 @@ const thumbnailPath = (
             densities={[1.5, 2]}
             class="hero-img"
         />
-        <h1>{project.data.titel}</h1>
+        <h1>{project.data.untertitel ?? project.data.titel}</h1>
         <SkipButton color="white" />
     </div>
     <EntryWrapper>
