@@ -1,6 +1,7 @@
 ---
 titel: Gemüsereibe statt Holzhobel
 thumbnail: ../../images/projects/hobelbank/hobelbank.jpg
+hero: ../../images/projects/hobelbank/hero.jpg
 priorität: 4
 ---
 

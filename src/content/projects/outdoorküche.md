@@ -1,6 +1,7 @@
 ---
 titel: Von Sandkuchen zu Pizzasteinen
 thumbnail: ../../images/projects/outdoorkueche/kuechenblock.jpg
+hero: ../../images/projects/outdoorkueche/hero.jpg
 priorität: 2
 ---
 

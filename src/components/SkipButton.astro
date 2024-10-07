@@ -3,15 +3,20 @@ import { Icon } from "astro-icon/components";
 
 interface Props {
     target?: string;
+    color?: string;
 }
 
-const { target = "#main" } = Astro.props;
+const { target = "#main", color = "var(--logo-color)" } = Astro.props;
 ---
 
 <button
     aria-label="Zum Inhalt springen"
     onclick={`document.querySelector('${target}').scrollIntoView({ behavior: 'smooth' });`}
-    ><Icon name="fa:chevron-down" title="Zum Inhalt springen" /></button
+    ><Icon
+        name="fa:chevron-down"
+        title="Zum Inhalt springen"
+        style={{ color }}
+    /></button
 >
 
 <style lang="scss">
@@ -32,7 +37,6 @@ const { target = "#main" } = Astro.props;
             svg {
                 height: 4em;
                 width: 4em;
-                color: var(--logo-color);
                 filter: drop-shadow(0 0 0.5em black);
             }
         }

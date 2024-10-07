@@ -1,6 +1,7 @@
 ---
 titel: Bungalow mit viel Liebe zum Detail
 thumbnail: ../../images/projects/neubau-reinhard/Header_Wohnzimmer.jpg
+hero: ../../images/projects/neubau-reinhard/hero.jpg
 priorität: 6
 ---
 

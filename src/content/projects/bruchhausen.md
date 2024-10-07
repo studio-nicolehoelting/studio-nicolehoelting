@@ -1,6 +1,7 @@
 ---
 titel: Transformation ins Neue Jahrtausend
 thumbnail: ../../images/projects/bruchhausen/Header_Schrankwand_q.jpg
+hero: ../../images/projects/bruchhausen/hero.jpg
 priorität: 5
 ---
 

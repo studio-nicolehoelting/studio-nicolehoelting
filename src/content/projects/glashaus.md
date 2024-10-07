@@ -1,6 +1,7 @@
 ---
 titel: Klein neben Gross
-thumbnail: ../../images/projects/gewächshaus/aussen.jpg
+thumbnail: ../../images/projects/glashaus/aussen.jpg
+hero: ../../images/projects/glashaus/hero.jpg
 priorität: 1
 ---
 
@@ -21,8 +22,8 @@ Garten ein, es liefert darüberhinaus Funktionen, die der Familie völlig neue M
 Schmökern im Hängesessel, sogar bei Regen. Glühweintrinken im Schnee. Tomaten züchten im Sommer...
 Immer hübsch anzusehen!
 
-![Aussen](../../images/projects/gewächshaus/aussen.jpg)
-![Bufflon](../../images/projects/gewächshaus/bufflon.jpg)
+![Aussen](../../images/projects/glashaus/aussen.jpg)
+![Bufflon](../../images/projects/glashaus/bufflon.jpg)
 
-![Hängesessel](../../images/projects/gewächshaus/haengesessel.jpg)
-![Tisch](../../images/projects/gewächshaus/tisch-aussen.jpg)
+![Hängesessel](../../images/projects/glashaus/haengesessel.jpg)
+![Tisch](../../images/projects/glashaus/tisch-aussen.jpg)

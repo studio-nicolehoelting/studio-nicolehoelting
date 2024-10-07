@@ -2,10 +2,11 @@
 import type { GetStaticPaths } from "astro";
 import { Schema } from "astro-seo-schema";
 import { getCollection, getEntry } from "astro:content";
-import { getImage } from "astro:assets";
+import { getImage, Image } from "astro:assets";
 
 import BasicLayout from "@layouts/BasicLayout.astro";
 import EntryWrapper from "@components/EntryWrapper.astro";
+import SkipButton from "@components/SkipButton.astro";
 
 export const getStaticPaths = (async () => {
     const projects = await getCollection("projects", ({ data }) => {
@@ -47,8 +48,64 @@ const thumbnailPath = (
             keywords: "Innenarchitektur, Design, Projekte, Interior Design",
         }}
     />
-    <EntryWrapper>
+    <div class="hero">
+        <Image
+            src={project.data.hero}
+            alt={project.data.titel}
+            quality="max"
+            densities={[1.5, 2]}
+            class="hero-img"
+        />
         <h1>{project.data.titel}</h1>
+        <SkipButton color="white" />
+    </div>
+    <EntryWrapper>
         <Content />
     </EntryWrapper>
 </BasicLayout>
+
+<style lang="scss">
+    .hero {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        margin-bottom: 5em;
+
+        @media (min-width: $breakpoint-s) {
+            height: calc(100dvh - 80px);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            :root[data-theme="dark"] & {
+                filter: brightness(0.6);
+            }
+        }
+
+        h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 80%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 2em;
+            text-align: center;
+            text-transform: uppercase;
+            z-index: 1;
+            font-weight: 700;
+            text-shadow: 6px 6px 4px rgba(0, 0, 0, 0.5);
+
+            @media only screen and (min-width: $breakpoint-s) {
+                font-size: 3em;
+            }
+
+            @media only screen and (min-width: $breakpoint-m) {
+                font-size: 4em;
+            }
+        }
+    }
+</style>

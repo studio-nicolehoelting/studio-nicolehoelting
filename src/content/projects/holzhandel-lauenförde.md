@@ -1,6 +1,7 @@
 ---
 titel: Wo Holzwürmer arbeiten
 thumbnail: ../../images/projects/holzhandel/03_Sitzecke_q.jpg
+hero: ../../images/projects/holzhandel/hero.jpg
 priorität: 2
 ---
 
