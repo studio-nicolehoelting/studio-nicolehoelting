@@ -8,12 +8,14 @@ priorität: 5
 
 So kann es aussehen, wenn ein Wohn-Esszimmer einer kräftigen Frischekur unterzogen wird. Die dunklen, mit Schnitzerei verzierten Nussbaum-Möbel aus den 1970er-Jahren wichen klaren Linien und hochwertigen Materialien. Oma freut sich über einen großen Esstisch mit Lederstühlen und -bank für die Familie, Opa über einen komfortablen Bildschirm für Fussball-Abende mit Freunden.
 
-![Engel](../../images/projects/bruchhausen/engel.jpg)
+![Platzset](../../images/projects/bruchhausen/Platzset_q.jpg)
+![Lampen](../../images/projects/bruchhausen/Lampen_q.jpg)
 
-![Wohnzimmer](../../images/projects/bruchhausen/wohnzimmer.jpg)
-![Esstisch](../../images/projects/bruchhausen/Esstisch_Bruchhausen_q.jpg)
+![Wohnzimmer & Esszimmer](../../images/projects/bruchhausen/WZ_EZ_q.jpg)
+![Wetterstation](../../images/projects/bruchhausen/Wetterstation_q.jpg)
 
-![Übergang](../../images/projects/bruchhausen/uebergang.jpg)
-![Wand](../../images/projects/bruchhausen/wand.jpg)
+![Schrankwand](../../images/projects/bruchhausen/Schrankwand_q.jpg)
+![Engel](../../images/projects/bruchhausen/Engel_q.jpg)
 
-![Sitzplatz](../../images/projects/bruchhausen/sitzplatz.jpg)
+![Stuhl](../../images/projects/bruchhausen/Stuhl_q.jpg)
+![Bild](../../images/projects/bruchhausen/Bild_q.jpg)

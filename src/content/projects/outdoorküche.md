@@ -1,16 +1,18 @@
 ---
 titel: Von Sandkuchen zu Pizzasteinen
 untertitel: So simpel.
-thumbnail: ../../images/projects/outdoorkueche/kuechenblock.jpg
+thumbnail: ../../images/projects/outdoorkueche/Header.jpg
 hero: ../../images/projects/outdoorkueche/hero.jpg
 priorität: 2
 ---
 
 Als die Kinder groß & das Kletterhaus mit Sandkasten zurückgebaut waren, brauchte es eine neue Idee für die Gartenecke. So simpel & doch so genial kann eine hübsche Outdoorküche entstehen.
 
-![Küchenblock](../../images/projects/outdoorkueche/kuechenblock.jpg)
+![Outdoor Utensilo](../../images/projects/outdoorkueche/Outdoor-Utensilo_q.jpg)
+![Grillrost](../../images/projects/outdoorkueche/Grillrost_q.jpg)
 
-![Grill](../../images/projects/outdoorkueche/grill.jpg)
-![Utensilo](../../images/projects/outdoorkueche/utensilo.jpg)
+![Küchenblock](../../images/projects/outdoorkueche/Kuechenblock_schraeg_q.jpg)
+![Zon, Wijn & BBQ](../../images/projects/outdoorkueche/ZonWijnBBQ2_q.jpg)
 
-![Weitblick](../../images/projects/outdoorkueche/weitblick.jpg)
+![Körbe](../../images/projects/outdoorkueche/Koerbe_q.jpg)
+![Outdoor-Küchenblock](../../images/projects/outdoorkueche/OutdoorkuechenblockFrontal_q.jpg)

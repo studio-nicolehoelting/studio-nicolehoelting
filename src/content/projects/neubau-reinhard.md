@@ -15,7 +15,10 @@ Die Innenausstattung dieses Neubaus sollte eine moderne Gemütlichkeit ausstrahl
 ![3D Wand](../../images/projects/neubau-reinhard/3DWand.jpg)
 
 ![Küche](../../images/projects/neubau-reinhard/Kuechenblock_q.jpg)
-![Weinkiste](../../images/projects/neubau-reinhard/Weinschrank_q.jpg)
+![Nala](../../images/projects/neubau-reinhard/Nala_bunt_2_q.jpg)
+
+![Weinschrank](../../images/projects/neubau-reinhard/Weinschrank_q.jpg)
+![Fische](../../images/projects/neubau-reinhard/FischeNatur_q.jpg)
 
 ![Waschtisch](../../images/projects/neubau-reinhard/WaschtischElternGanz.jpg)
 ![Treppenabgang](../../images/projects/neubau-reinhard/Treppenabgang_q.jpg)
