@@ -79,18 +79,24 @@ import lumbertrailImg from "@images/home/swiper/lumber-trail.jpg";
 <script>
     import Swiper from "swiper/bundle";
 
-    new Swiper(".hero-swiper", {
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-            waitForTransition: true,
-        },
-        allowTouchMove: false,
-        loop: true,
-        effect: "fade",
-    });
+    function afterSwap() {
+        new Swiper(".hero-swiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+                waitForTransition: true,
+            },
+            allowTouchMove: false,
+            loop: true,
+            effect: "fade",
+        });
+    }
+
+    document.addEventListener("astro:after-swap", afterSwap);
+
+    afterSwap();
 </script>
 
 <style lang="scss">

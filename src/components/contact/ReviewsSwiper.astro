@@ -34,33 +34,44 @@ const reviews = await getCollection("rezensionen").then((reviews) =>
 <script>
     import Swiper from "swiper/bundle";
 
-    const showArrows =
-        document.querySelectorAll(".reviews-swiper .swiper-slide").length > 1;
+    function afterSwap() {
+        const showArrows =
+            document.querySelectorAll(".reviews-swiper .swiper-slide").length >
+            1;
 
-    if (!showArrows) {
-        document.querySelector(".reviews-swiper .swiper-button-next")?.remove();
-        document.querySelector(".reviews-swiper .swiper-button-prev")?.remove();
+        if (!showArrows) {
+            document
+                .querySelector(".reviews-swiper .swiper-button-next")
+                ?.remove();
+            document
+                .querySelector(".reviews-swiper .swiper-button-prev")
+                ?.remove();
+        }
+
+        new Swiper(".reviews-swiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 10000,
+                disableOnInteraction: true,
+            },
+            rewind: true,
+            grabCursor: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                dynamicBullets: true,
+            },
+            navigation: showArrows && {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
     }
 
-    new Swiper(".reviews-swiper", {
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: true,
-        },
-        rewind: true,
-        grabCursor: true,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-            dynamicBullets: true,
-        },
-        navigation: showArrows && {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-    });
+    document.addEventListener("astro:after-swap", afterSwap);
+
+    afterSwap();
 </script>
 
 <style lang="scss">

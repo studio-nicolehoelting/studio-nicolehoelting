@@ -6,7 +6,7 @@ hero: ../../images/projects/neubau-reinhard/hero.jpg
 priorität: 6
 ---
 
-Die Innenausstattung dieses Neubaus sollte eine moderne Gemütlichkeit ausstrahlen, pflegeleicht & altersgerecht/alterstauglich sein. Die offene Wohnküche mit hohem Luftraum über Ess- und Wohnzimmer wirkt dank warmer Farben, natürlicher Materialien & der Integration vorhandener Lieblingsstücke luftig leicht. Nicht nur Nala liebt's.
+Die Innenausstattung dieses Neubaus sollte eine moderne Gemütlichkeit ausstrahlen, pflegeleicht & altersgerecht sein. Die offene Wohnküche mit hohem Luftraum über Ess- und Wohnzimmer wirkt dank warmer Farben, natürlicher Materialien & der Integration vorhandener Lieblingsstücke luftig leicht. Nicht nur Hund Nala liebt's.
 
 ![Wohnzimmer](../../images/projects/neubau-reinhard/Header_Wohnzimmer.jpg)
 ![Tablett](../../images/projects/neubau-reinhard/Tablett_Wohnzimmer_q.jpg)

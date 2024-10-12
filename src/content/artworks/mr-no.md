@@ -5,4 +5,4 @@ bilder:
     - ../../images/artworks/mr-no.jpg
 ---
 
-Mr. No - 50x60x1 cm - Acryl und Ölkreide auf Leinwand - 59,00 €
+50x60x1 cm - Acryl und Ölkreide auf Leinwand - 59,00 €
