@@ -8,7 +8,7 @@ const artworks = await getCollection("artworks").then((projects) =>
 );
 ---
 
-<BasicLayout title="artworks - Studio NH">
+<BasicLayout title="artworks - Studio NH" hasUpButton>
     <main class="artworks-grid">
         {
             artworks.map(async (artwork) => {

@@ -6,7 +6,7 @@ hero: ../../images/projects/holzhandel/Hochlager_2-1.jpg
 priorität: 2
 ---
 
-Einrichten ist... sehen. fühlen. erleben. Dieser Maxime folgend sind die Büroräume der <a href="https://holzhl.com" target="_blank">HolzHandel Lauenförde GmbH</a> als eine Komposition aus Formen, Farben, Materialien, Düfte & Melodien des Waldes gestaltet. Mitarbeiter & Kunden können so den Unternehmensgegenstand "Holz" mit allen Sinnen erleben.
+Einrichten ist... sehen. fühlen. erleben. Dieser Maxime folgend sind die Büroräume der <a href="https://holzhl.com" target="_blank">HolzHandel Lauenförde GmbH</a> als eine Komposition aus Formen, Farben, Materialien, Düften & Melodien des Waldes gestaltet. Mitarbeiter & Kunden können so den Unternehmensgegenstand "Holz" mit allen Sinnen erleben.
 
 ![Sitzecke](../../images/projects/holzhandel/Sitzecke_q.jpg)
 ![Birken](../../images/projects/holzhandel/BirkenOriginal_q.jpg)

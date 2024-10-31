@@ -11,7 +11,7 @@ const blogs = await getCollection("blog", ({ data }) => {
 );
 ---
 
-<BasicLayout title="blog - Studio NH">
+<BasicLayout title="blog - Studio NH" hasUpButton>
     <main class="blog-grid">
         {
             blogs.map((blog) => (

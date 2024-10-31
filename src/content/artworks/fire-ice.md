@@ -1,5 +1,5 @@
 ---
-priorität: 5
+priorität: 10
 titel: Fire & Ice
 bilder:
     - ../../images/artworks/fire_ice.png

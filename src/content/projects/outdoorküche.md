@@ -1,5 +1,5 @@
 ---
-titel: Von Sandkuchen zu Pizzasteinen
+titel: Von Sandkuchen & Pizzasteinen
 untertitel: So simpel.
 thumbnail: ../../images/projects/outdoorkueche/Header.jpg
 hero: ../../images/projects/outdoorkueche/hero.jpg

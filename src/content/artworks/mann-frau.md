@@ -1,5 +1,5 @@
 ---
-priorität: 15
+priorität: 80
 titel: M & F
 bilder:
     - ../../images/artworks/mann_frau.png

@@ -1,5 +1,5 @@
 ---
-priorität: 17
+priorität: 40
 titel: Luna
 bilder:
     - ../../images/artworks/luna.png

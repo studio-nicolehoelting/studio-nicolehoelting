@@ -1,5 +1,5 @@
 ---
-priorität: 7
+priorität: 25
 titel: Kraft III
 bilder:
     - ../../images/artworks/kraft_3.jpg

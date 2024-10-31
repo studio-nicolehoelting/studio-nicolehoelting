@@ -1,5 +1,5 @@
 ---
-priorität: 1
+priorität: 100
 titel: Schwesterherz
 bilder:
     - ../../images/artworks/schwesterherz.jpg

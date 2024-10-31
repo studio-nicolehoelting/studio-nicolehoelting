@@ -1,5 +1,5 @@
 ---
-priorität: 22
+priorität: 60
 titel: Hoffnung
 bilder:
     - ../../images/artworks/hoffnung.jpg

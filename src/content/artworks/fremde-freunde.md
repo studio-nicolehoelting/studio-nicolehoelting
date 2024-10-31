@@ -1,5 +1,5 @@
 ---
-priorität: 1
+priorität: 90
 titel: Fremde Freunde
 bilder:
     - ../../images/artworks/fremde_freunde.jpg

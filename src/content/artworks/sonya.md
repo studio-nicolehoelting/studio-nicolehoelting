@@ -1,5 +1,5 @@
 ---
-priorität: 21
+priorität: 75
 titel: Sonya
 bilder:
     - ../../images/artworks/sonya.jpg

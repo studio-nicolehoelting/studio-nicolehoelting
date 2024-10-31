@@ -11,7 +11,7 @@ const projects = await getCollection("projects", ({ data }) => {
 );
 ---
 
-<BasicLayout title="projects - Studio NH">
+<BasicLayout title="projects - Studio NH" hasUpButton>
     <main class="projects-grid">
         {
             projects.map((project) => (

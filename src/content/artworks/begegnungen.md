@@ -1,5 +1,5 @@
 ---
-priorität: 3
+priorität: 55
 titel: Begegnungen
 bilder:
     - ../../images/artworks/begegnungen.png

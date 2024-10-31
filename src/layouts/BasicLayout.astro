@@ -2,13 +2,15 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import NavigationBar from "@components/NavigationBar.astro";
 import Footer from "@components/Footer.astro";
+import UpButton from "@components/UpButton.astro";
 
 interface Props {
     title: string;
     footerText?: string;
+    hasUpButton?: boolean;
 }
 
-const { title, footerText } = Astro.props;
+const { title, footerText, hasUpButton } = Astro.props;
 ---
 
 <BaseLayout {title}>
@@ -17,5 +19,6 @@ const { title, footerText } = Astro.props;
     <div id="content">
         <slot />
     </div>
+    {hasUpButton && <UpButton />}
     <Footer text={footerText} />
 </BaseLayout>

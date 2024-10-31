@@ -1,5 +1,5 @@
 ---
-priorität: 9
+priorität: 20
 titel: Deep Ocean
 bilder:
     - ../../images/artworks/deep_ocean.jpg

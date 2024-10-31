@@ -11,7 +11,7 @@ const menu = [
 ];
 ---
 
-<nav class="navbar">
+<nav id="navbar">
     <div class="logo-container">
         <a href="/"><span class="logo-text">Nicole Hoelting</span></a>
     </div>
@@ -52,7 +52,7 @@ const menu = [
         overflow-x: clip;
     }
 
-    .navbar {
+    #navbar {
         box-sizing: border-box;
         margin: 0px;
         padding: 0px;
@@ -260,7 +260,7 @@ const menu = [
 
 <script>
     function afterSwap() {
-        const nav = document.querySelector("nav.navbar") as HTMLElement;
+        const nav = document.querySelector("nav#navbar") as HTMLElement;
         const navToggle = nav.querySelector(
             ".mobile-nav-toggle"
         ) as HTMLButtonElement;

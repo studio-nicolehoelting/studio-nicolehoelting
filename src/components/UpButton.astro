@@ -1,0 +1,86 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+    target?: string;
+    color?: string;
+}
+
+const { target = "nav#navbar", color = "var(--logo-color)" } = Astro.props;
+---
+
+<button
+    class="up-button hideAnimation hidden"
+    aria-label="Zurück nach oben"
+    onclick={`document.querySelector('${target}').scrollIntoView({ behavior: 'smooth' });`}
+    style={{ backgroundColor: color }}
+    ><Icon name="fa:chevron-up" title="Zurück nach oben" /></button
+>
+
+<style lang="scss">
+    button {
+        display: block;
+        position: fixed;
+        bottom: 1em;
+        right: 1em;
+        z-index: 10;
+        cursor: pointer;
+        background: none;
+        border: none;
+        transition: opacity 0.5s;
+        border-radius: 100%;
+        padding: 0.5em;
+        filter: drop-shadow(0 0 0.5em black);
+
+        &.hideAnimation {
+            opacity: 0;
+        }
+
+        &.hidden {
+            display: none;
+        }
+
+        svg {
+            height: 5em;
+            width: 5em;
+            color: white;
+            margin-top: -0.4em;
+            margin-bottom: 0.4em;
+
+            @media only screen and (min-width: $breakpoint-s) {
+                height: 4em;
+                width: 4em;
+                margin-top: -0.25em;
+                margin-bottom: 0.25em;
+            }
+        }
+    }
+</style>
+
+<script>
+    const button = document.querySelector(
+        "button.up-button"
+    )! as HTMLButtonElement;
+
+    let prevTimeout: NodeJS.Timeout | undefined = undefined;
+
+    function setVisibility() {
+        if (window.scrollY < 100) {
+            button.classList.add("hideAnimation");
+            clearTimeout(prevTimeout);
+            prevTimeout = setTimeout(() => {
+                button.classList.add("hidden");
+            }, 500);
+        } else {
+            button.classList.remove("hidden");
+            clearTimeout(prevTimeout);
+            prevTimeout = setTimeout(() => {
+                button.classList.remove("hideAnimation");
+            }, 100);
+        }
+    }
+
+    setVisibility();
+
+    document.addEventListener("scroll", setVisibility);
+</script>
