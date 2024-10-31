@@ -58,13 +58,14 @@ const { target = "nav#navbar", color = "var(--logo-color)" } = Astro.props;
 </style>
 
 <script>
-    const button = document.querySelector(
-        "button.up-button"
-    )! as HTMLButtonElement;
-
     let prevTimeout: NodeJS.Timeout | undefined = undefined;
 
     function setVisibility() {
+        const button = document.querySelector(
+            "button.up-button"
+        )! as HTMLButtonElement;
+        if (!button) return;
+
         if (window.scrollY < 100) {
             button.classList.add("hideAnimation");
             clearTimeout(prevTimeout);
