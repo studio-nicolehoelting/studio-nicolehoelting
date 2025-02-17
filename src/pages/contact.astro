@@ -24,18 +24,11 @@ import ReviewsSwiper from "@components/contact/ReviewsSwiper.astro";
         dich kennenzulernen! <br />
         Gemeinsam können wir deine Geschichte erzählen...
 
-        <form
-            id="contact-form"
-            action="https://contact-relay.nicolehoelting.de/form/coffee_talk"
-            method="post"
-        >
+        <form id="contact-form">
             <h3>Coffee-Talk</h3>
 
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required />
-
-            <label for="email">E-Mail</label>
-            <input type="email" id="email" name="email" required />
+            <label for="subject">Betreff</label>
+            <input type="text" id="subject" name="subject" required />
 
             <span class="message">
                 <label for="message">Nachricht</label>
@@ -194,11 +187,22 @@ import ReviewsSwiper from "@components/contact/ReviewsSwiper.astro";
 </style>
 
 <script>
-    const url = new URL(window.location.href);
-    const success = url.searchParams.get("success") == "true";
-    if (success) {
-        alert("Vielen Dank für deine Nachricht! Ich melde mich bei dir.");
+    interface ContactForm {
+        subject: HTMLInputElement;
+        message: HTMLTextAreaElement;
     }
-    url.searchParams.delete("success");
-    window.history.replaceState({}, "", url);
+
+    const contactForm = document.getElementById(
+        "contact-form"
+    ) as HTMLFormElement & ContactForm;
+    contactForm?.addEventListener("submit", (ev) => {
+        ev.preventDefault();
+        const subject = encodeURIComponent(contactForm.subject.value);
+        const message = encodeURIComponent(contactForm.message.value);
+
+        const mailto = `mailto:studio@nicolehoelting.de?subject=${subject}&body=${message}`;
+        const a = document.createElement("a");
+        a.href = mailto;
+        a.click();
+    });
 </script>
