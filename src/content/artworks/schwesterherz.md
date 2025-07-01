@@ -5,4 +5,4 @@ bilder:
     - ../../images/artworks/schwesterherz.jpg
 ---
 
-80x80x4 cm - Acryl mit Sand und Ölkreide auf Leinwand - 225,00 € (reserviert)
+80x80x4 cm - Acryl mit Sand und Ölkreide auf Leinwand - 210,00 €

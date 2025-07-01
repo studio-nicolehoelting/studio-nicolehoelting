@@ -5,4 +5,4 @@ bilder:
     - ../../images/artworks/blauer_block.jpg
 ---
 
-30x30x4 cm - Acryl mit Sand auf Leinwand - 30,00 €
+40x40x4 cm - Acryl mit Sand auf Leinwand - 49,00 €
