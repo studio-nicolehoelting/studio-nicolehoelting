@@ -1,6 +1,6 @@
-@import "./darkmode.scss";
-@import "./fonts.scss";
-@import "./variables.scss";
+@use "darkmode.scss";
+@use "fonts.scss";
+@use "variables.scss";
 
 * {
     margin: 0px;
