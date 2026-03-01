@@ -5,4 +5,4 @@ bilder:
     - ../../images/artworks/astwerk.jpg
 ---
 
-80x80x4 cm - Acryl auf Leinwand - 190,00 €
+80x120x4 cm - Acryl & Flourescence auf Leinwand - 225,00 €
