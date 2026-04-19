@@ -1,78 +1,68 @@
 ---
-import { Image } from "astro:assets";
+import {
+    Swiper,
+    SwiperButtonNext,
+    SwiperButtonPrev,
+    SwiperPagination,
+    SwiperSlide,
+    SwiperWrapper,
+    type AstroSwiperOptions,
+} from "astro-swiper";
 import { getCollection } from "astro:content";
-import "swiper/swiper-bundle.css";
 
 const reviews = await getCollection("rezensionen").then((reviews) =>
-    reviews.sort((a, b) => (a.data.datum < b.data.datum ? 1 : -1))
+    reviews.sort((a, b) => (a.data.datum < b.data.datum ? 1 : -1)),
 );
+
+const swiperOptions: AstroSwiperOptions = {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+        delay: 10000,
+        disableOnInteraction: true,
+    },
+    rewind: true,
+    grabCursor: true,
+    pagination: reviews.length > 1 && {
+        el: ".swiper-pagination",
+        clickable: true,
+        dynamicBullets: true,
+    },
+    navigation: reviews.length > 1 && {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+};
 ---
 
-<div class="swiper reviews-swiper">
-    <div class="swiper-wrapper">
+<Swiper class="reviews-swiper" options={swiperOptions}>
+    <SwiperWrapper>
         {
             reviews.map(async (review) => {
                 const { Content } = await review.render();
                 return (
-                    <div class="swiper-slide">
+                    <SwiperSlide>
                         <blockquote>
                             <div class="content">
                                 <Content />
                             </div>
                             <p class="name">- {review.data.name}</p>
                         </blockquote>
-                    </div>
+                    </SwiperSlide>
                 );
             })
         }
-    </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
-</div>
-
-<script>
-    import Swiper from "swiper/bundle";
-
-    function afterSwap() {
-        const showArrows =
-            document.querySelectorAll(".reviews-swiper .swiper-slide").length >
-            1;
-
-        if (!showArrows) {
-            document
-                .querySelector(".reviews-swiper .swiper-button-next")
-                ?.remove();
-            document
-                .querySelector(".reviews-swiper .swiper-button-prev")
-                ?.remove();
-        }
-
-        new Swiper(".reviews-swiper", {
-            spaceBetween: 30,
-            centeredSlides: true,
-            autoplay: {
-                delay: 10000,
-                disableOnInteraction: true,
-            },
-            rewind: true,
-            grabCursor: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-                dynamicBullets: true,
-            },
-            navigation: showArrows && {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
+    </SwiperWrapper>
+    {
+        reviews.length > 1 && (
+            <>
+                <SwiperButtonPrev />
+                <SwiperButtonNext />
+                <SwiperPagination />
+            </>
+        )
     }
-
-    document.addEventListener("astro:after-swap", afterSwap);
-
-    afterSwap();
-</script>
+</Swiper>
 
 <style lang="scss">
     .reviews-swiper {
@@ -86,16 +76,8 @@ const reviews = await getCollection("rezensionen").then((reviews) =>
 
             @media only screen and (min-width: $breakpoint-s) {
                 display: block;
-            }
-
-            &::after {
                 color: var(--logo-color);
             }
-        }
-
-        .swiper-button-next::after,
-        .swiper-button-prev::after {
-            color: var(--logo-color);
         }
 
         .swiper-pagination :global(.swiper-pagination-bullet-active) {
@@ -103,8 +85,7 @@ const reviews = await getCollection("rezensionen").then((reviews) =>
         }
 
         .swiper-slide {
-            padding-top: 1em;
-            padding-bottom: 2em;
+            padding-block: 1em;
             text-align: center;
             display: flex;
             justify-content: center;

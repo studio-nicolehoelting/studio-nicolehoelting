@@ -7,7 +7,7 @@ const menu = [
     ["/services/", "services"],
     ["/about/", "about"],
     ["/contact/", "contact"],
-    ["/blog/", "blog"],
+    ["/artworks/", "artworks"],
 ];
 ---
 
@@ -91,8 +91,11 @@ const menu = [
 
             @supports (backdrop-filter: blur(1rem)) and
                 (
-                    background-color:
-                        color-mix(in srgb, var(--logo-color) 80%, transparent)
+                    background-color: color-mix(
+                            in srgb,
+                            var(--logo-color) 80%,
+                            transparent
+                        )
                 ) {
                 background-color: color-mix(
                     in srgb,
@@ -262,7 +265,7 @@ const menu = [
     function afterSwap() {
         const nav = document.querySelector("nav#navbar") as HTMLElement;
         const navToggle = nav.querySelector(
-            ".mobile-nav-toggle"
+            ".mobile-nav-toggle",
         ) as HTMLButtonElement;
         const ul = nav.querySelector("ul")!;
 
@@ -270,7 +273,7 @@ const menu = [
             ul.classList.toggle("mobile-visible");
             navToggle.setAttribute(
                 "aria-open",
-                ul.classList.contains("mobile-visible").toString()
+                ul.classList.contains("mobile-visible").toString(),
             );
         });
     }

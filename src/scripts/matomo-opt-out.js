@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
         settings.useSecureCookies,
         settings.cookiePath,
         settings.cookieDomain,
-        settings.cookieSameSite
+        settings.cookieSameSite,
     );
     showContent(window.MatomoConsent.hasConsent());
 });
@@ -185,7 +185,7 @@ window.MatomoConsent = {
         useSecureCookies,
         cookiePath,
         cookieDomain,
-        cookieSameSite
+        cookieSameSite,
     ) {
         this.useSecureCookies = useSecureCookies;
         this.cookiePath = cookiePath;
@@ -193,7 +193,7 @@ window.MatomoConsent = {
         this.cookieSameSite = cookieSameSite;
         if (useSecureCookies && location.protocol !== "https:") {
             console.log(
-                "Error with setting useSecureCookies: You cannot use this option on http."
+                "Error with setting useSecureCookies: You cannot use this option on http.",
             );
         } else {
             this.cookieIsSecure = useSecureCookies;
@@ -216,7 +216,7 @@ window.MatomoConsent = {
         this.setCookie(
             this.CONSENT_COOKIE_NAME,
             new Date().getTime(),
-            946080000000
+            946080000000,
         );
     },
     consentRevoked: function () {
@@ -224,7 +224,7 @@ window.MatomoConsent = {
         this.setCookie(
             this.CONSENT_REMOVED_COOKIE_NAME,
             new Date().getTime(),
-            946080000000
+            946080000000,
         );
     },
     getCookie: function (cookieName) {
@@ -253,7 +253,7 @@ window.MatomoConsent = {
             console.log(
                 "There was an error setting cookie `" +
                     cookieName +
-                    "`. Please check domain and path."
+                    "`. Please check domain and path.",
             );
         }
     },

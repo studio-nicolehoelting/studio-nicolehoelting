@@ -1,6 +1,5 @@
 ---
 import { Image } from "astro:assets";
-import "swiper/swiper-bundle.css";
 
 import wohhnzimmerReinhardImg from "@images/home/swiper/wohnzimmer-reinhardt.jpg";
 import ichImg from "@images/home/swiper/ich.jpg";
@@ -10,94 +9,89 @@ import schlafzimmerwandImg from "@images/home/swiper/schlafzimmerwand-reinhardt.
 import nalaImg from "@images/home/swiper/nala.jpg";
 import kuecheReinhardImg from "@images/home/swiper/küche.jpg";
 import lumbertrailImg from "@images/home/swiper/lumber-trail.jpg";
+import {
+    Swiper,
+    SwiperSlide,
+    SwiperWrapper,
+    type AstroSwiperOptions,
+} from "astro-swiper";
+
+const swiperOptions: AstroSwiperOptions = {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+        waitForTransition: true,
+    },
+    allowTouchMove: false,
+    loop: true,
+    effect: "fade",
+};
 ---
 
-<div class="swiper hero-swiper">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide">
+<Swiper class="hero-swiper" options={swiperOptions}>
+    <SwiperWrapper>
+        <SwiperSlide>
             <Image
                 src={wohhnzimmerReinhardImg}
                 alt="Wohnzimmer Reinhard"
                 quality="high"
                 densities={[1.5, 2]}
             />
-        </div>
-        <div class="swiper-slide">
+        </SwiperSlide>
+        <SwiperSlide>
             <Image src={ichImg} alt="Ich" quality="high" densities={[1.5, 2]} />
-        </div>
-        <div class="swiper-slide">
+        </SwiperSlide>
+        <SwiperSlide>
             <Image
                 src={rundeStuehleImg}
                 alt="Runde Stühle"
                 quality="high"
                 densities={[1.5, 2]}
             />
-        </div>
-        <div class="swiper-slide">
+        </SwiperSlide><SwiperSlide>
             <Image
                 src={flurImg}
                 alt="Flur"
                 quality="high"
                 densities={[1.5, 2]}
             />
-        </div>
-        <div class="swiper-slide">
+        </SwiperSlide>
+        <SwiperSlide>
             <Image
                 src={schlafzimmerwandImg}
                 alt="Schlafzimmerwand Reinhard"
                 quality="high"
                 densities={[1.5, 2]}
             />
-        </div>
-        <div class="swiper-slide">
+        </SwiperSlide>
+        <SwiperSlide>
             <Image
                 src={nalaImg}
                 alt="Nala"
                 quality="high"
                 densities={[1.5, 2]}
             />
-        </div>
-        <div class="swiper-slide">
+        </SwiperSlide>
+        <SwiperSlide>
             <Image
                 src={kuecheReinhardImg}
                 alt="Küche"
                 quality="high"
                 densities={[1.5, 2]}
             />
-        </div>
-        <div class="swiper-slide">
+        </SwiperSlide>
+        <SwiperSlide>
             <Image
                 src={lumbertrailImg}
                 alt="Lumbertrail"
                 quality="high"
                 densities={[1.5, 2]}
             />
-        </div>
-    </div>
-</div>
-
-<script>
-    import Swiper from "swiper/bundle";
-
-    function afterSwap() {
-        new Swiper(".hero-swiper", {
-            spaceBetween: 30,
-            centeredSlides: true,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-                waitForTransition: true,
-            },
-            allowTouchMove: false,
-            loop: true,
-            effect: "fade",
-        });
-    }
-
-    document.addEventListener("astro:after-swap", afterSwap);
-
-    afterSwap();
-</script>
+        </SwiperSlide>
+    </SwiperWrapper>
+</Swiper>
 
 <style lang="scss">
     .hero-swiper {
