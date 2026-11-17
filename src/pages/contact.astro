@@ -20,38 +20,35 @@ import ReviewsSwiper from "@components/contact/ReviewsSwiper.astro";
         <SkipButton />
     </div>
     <main id="main">
-        Ruf' mich gern an oder schreibe mir eine E-Mail. <br /> Ich freu' mich darauf,
-        dich kennenzulernen! <br />
+        Ruf' mich gern an oder schreibe mir eine E-Mail. <br /> Ich freu' mich
+        darauf, dich kennenzulernen! <br />
         Gemeinsam können wir deine Geschichte erzählen...
-
-        <form id="contact-form">
-            <h3>Coffee-Talk</h3>
-
-            <label for="subject">Betreff</label>
-            <input type="text" id="subject" name="subject" required />
-
-            <span class="message">
-                <label for="message">Nachricht</label>
-                <textarea id="message" name="message" required></textarea>
-            </span>
-
-            <button type="submit">Absenden</button>
-        </form>
-
+        {
+            // <form id="contact-form">
+            //     <h3>Coffee-Talk</h3>
+            //     <label for="subject">Betreff</label>
+            //     <input type="text" id="subject" name="subject" required />
+            //     <span class="message">
+            //         <label for="message">Nachricht</label>
+            //         <textarea id="message" name="message" required></textarea>
+            //     </span>
+            //     <button type="submit">Absenden</button>
+            // </form>
+        }
         <section id="information">
             <span class="name">Nicole Hoelting</span>
             <span class="street"> Starenweg Zehn </span>
             <span class="city"> Drei Drei Null Drei Vier Brakel </span>
             <span class="email">
-                E-Mail: <a href="mailto:studio@nicolehoelting.de"
-                    >studio@nicolehoelting.de</a
-                >
+                E-Mail:{" "}
+                <a href="mailto:studio@nicolehoelting.de">
+                    studio@nicolehoelting.de
+                </a>
             </span>
             <span class="tel">
                 Fon: <a href="tel:+4915253484096">+49 152 53484096</a>
             </span>
         </section>
-
         <section id="reviews">
             <h2>Rezensionen</h2>
             <ReviewsSwiper />
@@ -193,7 +190,7 @@ import ReviewsSwiper from "@components/contact/ReviewsSwiper.astro";
     }
 
     const contactForm = document.getElementById(
-        "contact-form"
+        "contact-form",
     ) as HTMLFormElement & ContactForm;
     contactForm?.addEventListener("submit", (ev) => {
         ev.preventDefault();
