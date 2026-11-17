@@ -9,14 +9,14 @@ import {
     SwiperPagination,
     SwiperSlide,
     SwiperWrapper,
+    type AstroSwiperOptions,
 } from "astro-swiper";
-import type { SwiperOptions } from "swiper/types";
 
 const artworks = await getCollection("artworks").then((projects) =>
     projects.sort((a, b) => b.data.priorität - a.data.priorität),
 );
 
-const swiperOptions: SwiperOptions = {
+const swiperOptions: AstroSwiperOptions = {
     spaceBetween: 10,
     centeredSlides: true,
     rewind: true,
@@ -35,47 +35,42 @@ const swiperOptions: SwiperOptions = {
 
 <BasicLayout title="artworks - Studio NH" hasUpButton>
     <main class="artworks-grid">
-        {
-            artworks.map(async (artwork) => {
-                const { Content } = await artwork.render();
-                return (
-                    <div class="artwork">
-                        {artwork.data.bilder.length == 1 ? (
-                            <Image
-                                src={artwork.data.bilder[0]}
-                                alt={artwork.data.titel}
-                                quality={"mid"}
-                            />
-                        ) : (
-                            <Swiper
-                                class="artwork-swiper"
-                                options={swiperOptions}
-                            >
-                                <SwiperWrapper>
-                                    {artwork.data.bilder.map((bild, index) => (
-                                        <SwiperSlide>
-                                            <Image
-                                                src={bild}
-                                                alt={`${artwork.data.titel} - Bild ${index + 1}`}
-                                                quality={"mid"}
-                                            />
-                                        </SwiperSlide>
-                                    ))}
-                                </SwiperWrapper>
-                                <SwiperButtonNext />
-                                <SwiperButtonPrev />
-                                <SwiperPagination />
-                            </Swiper>
-                        )}
+        {artworks.map(async (artwork) => {
+            const { Content } = await artwork.render();
+            return (
+                <div class="artwork">
+                    {artwork.data.bilder.length == 1 ? (
+                        <Image
+                            src={artwork.data.bilder[0]}
+                            alt={artwork.data.titel}
+                            quality={"mid"}
+                        />
+                    ) : (
+                        <Swiper class="artwork-swiper" options={swiperOptions}>
+                            <SwiperWrapper>
+                                {artwork.data.bilder.map((bild, index) => (
+                                    <SwiperSlide>
+                                        <Image
+                                            src={bild}
+                                            alt={`${artwork.data.titel} - Bild ${index + 1}`}
+                                            quality={"mid"}
+                                        />
+                                    </SwiperSlide>
+                                ))}
+                            </SwiperWrapper>
+                            <SwiperButtonNext />
+                            <SwiperButtonPrev />
+                            <SwiperPagination />
+                        </Swiper>
+                    )}
 
-                        <h2>{artwork.data.titel}</h2>
-                        <span>
-                            <Content />
-                        </span>
-                    </div>
-                );
-            })
-        }
+                    <h2>{artwork.data.titel}</h2>
+                    <span>
+                        <Content />
+                    </span>
+                </div>
+            );
+        })}
     </main>
 </BasicLayout>
 
